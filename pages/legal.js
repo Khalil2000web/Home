@@ -90,6 +90,7 @@ export default function Legal() {
   }, []);
 
   return (
+    <>
           <Head>
         <title>LEGAL</title>
         <meta name="description" content="Terms & Conditions and Privacy Policy of Khaliil.com" />
@@ -216,5 +217,9 @@ export default function Legal() {
         <span className="arrow" aria-hidden="true" style={{ fontSize: '20px' }}>↓</span>
       </button>
     </div>
+    </>
   );
-}
+
+
+
+
