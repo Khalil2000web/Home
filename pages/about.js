@@ -24,7 +24,7 @@ export default function AboutPage() {
         <meta name="copyright" content="2025" />
       </Head>
 
-      <div className="about-content" style={{ color: "white", backgroundColor: "black", padding: "50px", lineHeight: "1.8" }}>
+      <div className="about-content">
         <h2>KHALIIL.COM</h2>
         <p>
           I’m Khalil (Khaliil). I move through the world with a lens, capturing what most people miss—the quiet moments, the energy of cities, the stories hidden in streets and skies. This site is my space to share those experiences, raw and unfiltered, as I see them.
