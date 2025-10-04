@@ -29,3 +29,11 @@ text-align: center;
 #privacy-policy, #terms-conditions {
   scroll-margin-top: 110px;
 }
+.arrow {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.arrow.up {
+  transform: rotate(180deg);
+}
+
