@@ -162,7 +162,7 @@ export default function Legal() {
       <p><strong>ACCEPTANCE OF TERMS</strong></p>
       <p>By using the Site and its subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
 
-      <h2 id="privacy-policy">PRIVACY POLICY</h2>
+      <h2 id="privacy-policy" style={{ paddingTop: '80px' }}>PRIVACY POLICY</h2>
       <p><strong>EFFECTIVE DATE: AUGUST 10, 2025</strong></p>
 
       <p><strong>1. INTRODUCTION</strong></p>
