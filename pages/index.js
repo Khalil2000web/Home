@@ -5,7 +5,7 @@ export default function HomePage() {
     return (
     <>
             <Head>
-        <title>ABOUT</title>
+        <title>KHALIIL</title>
         <meta name="description" content="Khaliil's Official Website" />
         <meta name="url" content="https://www.khaliil.com" />
         <meta name="twitter:card" content="summary" />
