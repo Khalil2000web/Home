@@ -25,18 +25,18 @@ export default function AboutPage() {
       </Head>
 
       <div className="about-content">
-        <h2>KHALIIL.COM</h2>
+        <h2>ABOUT</h2>
         <p>
-          I’m Khalil (Khaliil). I move through the world with a lens, capturing what most people miss—the quiet moments, the energy of cities, the stories hidden in streets and skies. This site is my space to share those experiences, raw and unfiltered, as I see them.
+Hey, I’m Khaliil (Khalil), a 17-year-old creator, coder, and dreamer. I’m deeply obsessed with how things are built — from websites to apps, and I spend most of my time learning, designing, and coding. My goal is to become a software engineer and create digital experiences that feel smart, clean, and full of meaning.
         </p>
         <p>
-          Every trip, every frame, every sound is part of a story. Not just a memory, but a perspective. I don’t just travel—I observe, feel, and create. The journeys here aren’t about where I’ve been; they’re about what I’ve seen, felt, and imagined along the way.
+This website is a reflection of me, my ideas, my projects, and the moments I capture. I don’t travel often, but when I do, I bring back what inspires me most: the visuals, the sounds, and the stories behind every place.
         </p>
         <p>
-          This isn’t a gallery of perfect pictures. It’s a record of life in motion, of curiosity and discovery, of moments that leave a mark. It’s honest. It’s intentional. It’s the way I choose to see the world.
+Everything here is built and shared by me. And yes — it’s completely legal to have a site like this at 17. I own my content and handle everything myself, responsibly.
         </p>
         <p>
-          Step in. Explore. Experience the world through my eyes.
+Welcome to my world: part code, part art, and completely me.
         </p>
       </div>
     </>
