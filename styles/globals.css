@@ -43,12 +43,6 @@
   width: 90%;
 }
 
-.nav-links a {
-  font-size: 21px;
-  padding: 10px;
-  margin-top: 15px;
-}
-
 .footer {
   bottom: 0;
   align-items: center;
@@ -78,9 +72,19 @@
   letter-spacing: -2px;
 }
 
-.nav-links a:hover, .footer-links a:hover {
+.nav-links a:hover, .nav-link:hover, .footer-links a:hover {
   color: #444;
 }
+
+.nav-links a, .nav-link {
+  font-size:21px;
+  padding:10px;
+  margin-top:15px;
+  text-decoration:none;
+  color:var(--text-color);
+  transition:color .3s ease;
+}
+
 
 @media only screen and (min-width:46em) {
   .footer-links, .nav-links {
