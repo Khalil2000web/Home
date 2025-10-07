@@ -5,12 +5,12 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <header className="navbar">
-        <nav className="nav-links">
+        <div className="nav-links">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <a href="https://tour.khaliil.com/">Tour</a>
+          <a href="https://tour.khaliil.com/" rel="noopener noreferrer">Tour</a>
           <span className="nbold">K//</span>
-        </nav>
+        </div>
       </header>
 
       <Component {...pageProps} />
