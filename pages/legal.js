@@ -157,7 +157,7 @@ export default function Legal() {
       <p>The Owner may update these Terms at any time without prior notice. Continued use of the Site after changes constitutes acceptance of the updated Terms.</p>
 
       <p><strong>13. CONTACT INFORMATION</strong></p>
-      <p>For any questions or concerns, please contact the Owner at <a href="mailto:khalildiab2008@gmail.com">khalildiab2008@gmail.com</a>.</p>
+      <p>For any questions or concerns, please contact the Owner at <a href="mailto:help@khaliil.com">help@khaliil.com</a>.</p>
 
       <p><strong>ACCEPTANCE OF TERMS</strong></p>
       <p>By using the Site and its subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
@@ -191,7 +191,7 @@ export default function Legal() {
       <p>We may update this policy from time to time to reflect technological, legal, or operational changes. Updates will be posted here with a revised effective date.</p>
 
       <p><strong>8. CONTACT</strong></p>
-      <p>For questions about this Privacy Policy, please contact us at <a href="mailto:khalildiab2008@gmail.com">khalildiab2008@gmail.com</a>.</p>
+      <p>For questions about this Privacy Policy, please contact us at <a href="mailto:help@khaliil.com">help@khaliil.com</a>.</p>
 
       <p><strong>ACCEPTANCE OF PRIVACY POLICY</strong></p>
       <p>By using this Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please discontinue use of the Site.</p>
