@@ -191,10 +191,10 @@ export default function Legal() {
       <p>We may update this policy from time to time to reflect technological, legal, or operational changes. Updates will be posted here with a revised effective date.</p>
 
       <p><strong>8. CONTACT</strong></p>
-      <p>For questions about this Privacy Policy, please contact us at <a href="mailto:help@khaliil.com">help@khaliil.com</a>. All emails from khaliil.com are sent from official accounts. If you receive suspicious emails claiming to be from us, please contact help@khalil.com immediately.</p>
+      <p>For questions about this Privacy Policy, please contact us at <a href="mailto:help@khaliil.com">help@khaliil.com</a>. All emails from khaliil.com are sent from official accounts. If you receive suspicious emails claiming to be from us, please contact help@khalil.com immediately.<br /></p>
 
       <p><strong>ACCEPTANCE OF PRIVACY POLICY:</strong></p>
-      <p>By using this Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please discontinue use of the Site.<br /></p>
+      <p>By using this Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please discontinue use of the Site.</p>
 
       <button id="scrollBtn" aria-label="Jump to section" style={{
         position: 'fixed',
