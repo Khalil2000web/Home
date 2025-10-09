@@ -1,19 +1,9 @@
-import '../styles/globals.css'
-import Link from 'next/link'
-import { pagesData } from '../data/pagesData'
-import Head from 'next/head'
+import '../styles/globals.css';
+import Link from 'next/link';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <script
-          id="__NEXT_DATA__"
-          type="application/json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pagesData) }}
-        />
-      </Head>
-
       <header className="navbar">
         <div className="nav-links">
           <Link className="nav-link" href="/">Home</Link>
@@ -32,6 +22,5 @@ export default function App({ Component, pageProps }) {
         </div>
       </footer>
     </>
-  )
+  );
 }
-
