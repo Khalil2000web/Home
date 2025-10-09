@@ -34,7 +34,7 @@ html, body {
   overflow-wrap: break-word;
 }
 
-.navbar a, .footer a {
+.navbar .nav-link, .footer a {
   color: var(--text-color);
   text-decoration: none;
   cursor: pointer;
@@ -73,15 +73,8 @@ html, body {
   padding-bottom: 20px;
 }
 
-.nav-links a, .footer-links a {
+.nav-links .nav-link, .footer-links a {
   transition: color .3s ease;
-}
-
-.nbold {
-  pointer-events: none;
-  touch-action:none;
-  font-family: var(--font-main-bold);
-  letter-spacing: -2px;
 }
 
 .nav-links a:hover, .nav-link:hover, .footer-links a:hover {
@@ -102,7 +95,7 @@ html, body {
   .footer-links, .nav-links {
     max-width: 80%;
   }
-  .nav-links a {
+  .nav-links .nav-link {
     font-size: 22px;
   }
   .footer-links a, .footer-links p {
@@ -111,7 +104,7 @@ html, body {
 }
 
 @media only screen and (max-width:300px) {
-  .nav-links a {
+  .nav-links .nav-link {
     font-size: 16px;
   }
   .footer-links a, .footer-links p {
