@@ -37,7 +37,6 @@ export default function HomePage() {
 
 <div vlassName="manivi"
   style={{
-    width: '100%',
     paddingTop: '60px',
     display: 'flex',
     flexDirection: 'column',
