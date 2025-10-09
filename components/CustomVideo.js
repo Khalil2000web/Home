@@ -86,25 +86,27 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     <div ref={containerRef} className="video-container">
       {loading && !error && !isPlaying && <div className="spinner"></div>}
 
-      <video
-        ref={videoRef}
-        src={src}
-        autoPlay
-        loop
-        muted={isMuted}
-        playsInline
-        controls={false} // forbid default controls
-        onPlaying={handlePlaying}
-        onPause={handlePause}
-        onWaiting={handleWaiting}
-        onError={handleError}
-        style={{
-          width: "100%",
-          height: "100%",
-          display: error ? "none" : "block",
-          objectFit: "cover"
-        }}
-      />
+<video
+  ref={videoRef}
+  src={src}
+  autoPlay
+  loop
+  muted={isMuted}
+  playsInline
+  controls={false}
+  disablePictureInPicture
+  controlsList="nofullscreen nodownload noplaybackrate"
+  onPlaying={handlePlaying}
+  onPause={handlePause}
+  onWaiting={handleWaiting}
+  onError={handleError}
+  style={{
+    width: "100%",
+    height: "100%",
+    display: error ? "none" : "block",
+    objectFit: "cover",
+  }}
+/>
 
       {error && (
         <div className="error-overlay">
