@@ -35,7 +35,7 @@ export default function HomePage() {
           </a>
         </div>
 
-<div
+<div vlassName="manivi"
   style={{
     width: '100%',
     paddingTop: '60px',
@@ -52,7 +52,7 @@ export default function HomePage() {
   <a
     href="https://tour.khaliil.com/"
     style={{
-      width: '80px',
+      width: '80%',
       paddingTop: '10px',
       paddingBottom: '10px',
       textAlign: 'center',
