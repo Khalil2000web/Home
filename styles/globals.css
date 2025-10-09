@@ -144,6 +144,14 @@ text-align: center;
 #privacy-policy, #terms-conditions {
   scroll-margin-top: 110px;
 }
+
+.content, .content *, .content p {
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 .arrow {
   display: inline-block;
   transition: transform 0.2s cubic-bezier(0.65, 0, 0.35, 1);
