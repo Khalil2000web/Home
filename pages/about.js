@@ -3,7 +3,7 @@ import { pagesData } from '../data/pagesData';
 export async function getStaticProps() {
   return {
     props: {
-      page: pagesData.
+      page: pagesData.about
     }
   };
 }
@@ -18,6 +18,3 @@ export default function AboutPage({ page }) {
     </div>
   );
 }
-
-
-
