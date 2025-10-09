@@ -20,7 +20,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   const togglePlay = () => {
     if (!videoRef.current) return;
     if (videoRef.current.paused) {
-      videoRef.current.play();
+      videoRef.current.play().catch(() => setIsPlaying(false));
     } else {
       videoRef.current.pause();
     }
@@ -30,13 +30,11 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     if (!videoRef.current) return;
 
     if (isMuted) {
-
       if (currentlyUnmutedVideo && currentlyUnmutedVideo !== videoRef.current) {
         currentlyUnmutedVideo.muted = true;
         const prevIcon = currentlyUnmutedVideo.closest(".video-container")?.querySelector(".sound-btn img");
         if (prevIcon) prevIcon.src = muteIcon;
       }
-
       videoRef.current.muted = false;
       currentlyUnmutedVideo = videoRef.current;
       updateIcon(false);
@@ -70,23 +68,15 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const frame = requestAnimationFrame(function sync() {
-      if (videoRef.current) {
-        setIsPlaying(!videoRef.current.paused);
-        setIsMuted(videoRef.current.muted);
-      }
-      requestAnimationFrame(sync);
-    });
-    return () => cancelAnimationFrame(frame);
-  }, []);
-
-  const handlePlay = () => {
-    setLoading(false);
+  const handlePlaying = () => {
     setIsPlaying(true);
+    setLoading(false);
   };
+
   const handlePause = () => setIsPlaying(false);
+
   const handleWaiting = () => setLoading(true);
+
   const handleError = () => {
     setError(true);
     setLoading(false);
@@ -94,7 +84,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
 
   return (
     <div ref={containerRef} className="video-container">
-      {loading && !error && <div className="spinner"></div>}
+      {loading && !error && !isPlaying && <div className="spinner"></div>}
 
       <video
         ref={videoRef}
@@ -103,7 +93,8 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         loop
         muted={isMuted}
         playsInline
-        onPlaying={handlePlay}
+        controls={false} // forbid default controls
+        onPlaying={handlePlaying}
         onPause={handlePause}
         onWaiting={handleWaiting}
         onError={handleError}
@@ -128,7 +119,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         </button>
       )}
 
-      {!isPlaying && !error && (
+      {!isPlaying && !loading && !error && (
         <button className="play-btn" onClick={togglePlay}>
           PLAY
         </button>
@@ -154,7 +145,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
         .sound-btn img {
           width: 19px;
           user-select:none;
-          user-drag:none
+          user-drag:none;
         }
 
         .play-btn {
@@ -186,8 +177,8 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           opacity: 0.8;
           animation:spinner-bulqg1 0.8s infinite linear alternate,spinner-oaa3wk 1.6s infinite linear;margin:-30px 0 0 -30px;
         }
-        
-@keyframes spinner-bulqg1{0%{clip-path:polygon(50% 50%,0 0,50% 0%,50% 0%,50% 0%,50% 0%,50% 0%);}12.5%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 0%,100% 0%,100% 0%);}25%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,100% 100%,100% 100%);}50%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}62.5%{clip-path:polygon(50% 50%,100% 0,100% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}75%{clip-path:polygon(50% 50%,100% 100%,100% 100%,100% 100%,100% 100%,50% 100%,0% 100%);}100%{clip-path:polygon(50% 50%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,0% 100%);}}@keyframes spinner-oaa3wk{0%{transform:scaleY(1) rotate(0deg);}49.99%{transform:scaleY(1) rotate(135deg);}50%{transform:scaleY(-1) rotate(0deg);}100%{transform:scaleY(-1) rotate(-135deg);}}
+
+        @keyframes spinner-bulqg1{0%{clip-path:polygon(50% 50%,0 0,50% 0%,50% 0%,50% 0%,50% 0%,50% 0%);}12.5%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 0%,100% 0%,100% 0%);}25%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,100% 100%,100% 100%);}50%{clip-path:polygon(50% 50%,0 0,50% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}62.5%{clip-path:polygon(50% 50%,100% 0,100% 0%,100% 0%,100% 100%,50% 100%,0% 100%);}75%{clip-path:polygon(50% 50%,100% 100%,100% 100%,100% 100%,100% 100%,50% 100%,0% 100%);}100%{clip-path:polygon(50% 50%,50% 100%,50% 100%,50% 100%,50% 100%,50% 100%,0% 100%);}}@keyframes spinner-oaa3wk{0%{transform:scaleY(1) rotate(0deg);}49.99%{transform:scaleY(1) rotate(135deg);}50%{transform:scaleY(-1) rotate(0deg);}100%{transform:scaleY(-1) rotate(-135deg);}}
 
         .error-overlay {
           position: absolute;
