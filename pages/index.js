@@ -42,6 +42,7 @@ export default function HomePage() {
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
+    margin: '0 auto',
     paddingBottom: '150px',
   }}
 >
