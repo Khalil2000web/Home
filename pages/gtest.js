@@ -1,11 +1,24 @@
 // pages/gallery-test.js
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function GalleryTest() {
   const [overlayOpen, setOverlayOpen] = useState(false);
   const [activeImage, setActiveImage] = useState(null);
 
   const images = Array.from({ length: 20 }, (_, i) => `https://picsum.photos/600/400?random=${i}`);
+
+  // Disable background scroll and touch when overlay is open
+  useEffect(() => {
+    if (overlayOpen) {
+      const preventScroll = (e) => e.preventDefault();
+      document.body.style.overflow = "hidden"; // hide body scroll
+      document.addEventListener("touchmove", preventScroll, { passive: false }); // prevent touch scroll
+      return () => {
+        document.body.style.overflow = "";
+        document.removeEventListener("touchmove", preventScroll);
+      };
+    }
+  }, [overlayOpen]);
 
   const openOverlay = (src) => {
     setActiveImage(src);
@@ -18,8 +31,8 @@ export default function GalleryTest() {
   };
 
   return (
-    <div>
-      <h1 style={{ textAlign: "center" }}>Scrollable Gallery Test</h1>
+    <div className="page-wrapper">
+      <h1 style={{ textAlign: "center" }}>Gallery Test</h1>
 
       <div className="gallery">
         {images.map((src, i) => (
@@ -65,14 +78,14 @@ export default function GalleryTest() {
           justify-content: center;
           align-items: center;
           z-index: 9999;
-          overflow: auto; /* allow scrolling inside overlay */
-          -webkit-overflow-scrolling: touch; /* smooth iOS scrolling */
+          overflow: auto;
+          -webkit-overflow-scrolling: touch;
         }
 
         .overlay-content {
           max-width: 90%;
           max-height: 90%;
-          overflow: auto; /* trap scroll inside overlay */
+          overflow: auto;
           position: relative;
         }
 
