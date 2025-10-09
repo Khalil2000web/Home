@@ -141,3 +141,6 @@ text-align: center;
   transform: rotate(180deg);
 }
 
+
+@media screen and (min-width:46em) {.manivi {max-width:70%;}}
+
