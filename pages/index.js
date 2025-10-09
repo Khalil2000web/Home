@@ -42,12 +42,11 @@ export default function HomePage() {
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
+    paddingBottom: '100px',
   }}
 >
   <CustomVideo
     src="https://ik.imagekit.io/cx6yav04a/E9D48422-5E4E-4D8D-BFC0-8C6AA2DCC1F4-2.mp4"
-    muteIcon="/icons/icon-mute.svg"
-    unmuteIcon="/icons/icon-volume.svg"
   />
 
   <a
@@ -60,6 +59,7 @@ export default function HomePage() {
       margin: '0 auto',
       textDecoration: 'none',
       border: '1px solid white',
+    color: 'white',
     }}
   >
     TOUR
