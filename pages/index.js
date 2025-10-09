@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import CustomVideo from "../components/CustomVideo.js";
 
 export default function HomePage() {
     return (
@@ -33,122 +34,37 @@ export default function HomePage() {
             </p>
           </a>
         </div>
-  
-        <div className="scroll-container" id="scroller">
-          <div className="item"><p>VIENNA</p></div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1743.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1731.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_3815.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item"><p>BUDAPEST</p></div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-62c7562398154a439829645cb8dca3d2.r2.dev/IMG_2368.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-62c7562398154a439829645cb8dca3d2.r2.dev/IMG_2227.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-62c7562398154a439829645cb8dca3d2.r2.dev/IMG_2150.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item"><p>PRAGUE</p></div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3682.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3692.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-  
-          <div className="item">
-            <a href="https://tour.khaliil.com/" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2491.jpeg"
-                className="img-item"
-                alt="Image"
-                decoding="async"
-                loading="eager"
-              />
-            </a>
-          </div>
-        </div>
+
+<div
+  style={{
+    width: '100%',
+    paddingTop: '60px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '40px',
+  }}
+>
+  <CustomVideo
+    src="https://ik.imagekit.io/cx6yav04a/E9D48422-5E4E-4D8D-BFC0-8C6AA2DCC1F4-2.mp4"
+    muteIcon="/icons/icon-mute.svg"
+    unmuteIcon="/icons/icon-volume.svg"
+  />
+
+  <a
+    href="https://tour.khaliil.com"
+    style={{
+      width: '80px',
+      paddingTop: '10px',
+      paddingBottom: '10px',
+      textAlign: 'center',
+      margin: '0 auto',
+      textDecoration: 'none',
+      border: '1px solid white',
+    }}
+  >
+    TOUR
+  </a>
+</div>
       </main>
       </>
     );
