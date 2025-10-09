@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="https://tour.khaliil.com/">Tour</a>
-          <a id="nbold">K//</a>
+          <img id="logo" src="/icons/logo.png" alt="Logo">
         </div>
       </header>
 
