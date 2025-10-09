@@ -47,6 +47,8 @@ export default function HomePage() {
 >
   <CustomVideo
     src="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4"
+    muteIcon="/icons/icon-mute.svg"
+    unmuteIcon="/icons/icon-volume.svg"
   />
 
   <a
