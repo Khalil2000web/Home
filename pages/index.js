@@ -35,8 +35,9 @@ export default function HomePage() {
           </a>
         </div>
 
-<div vlassName="manivi"
+<div className="manivi"
   style={{
+    width: '100%',
     paddingTop: '60px',
     display: 'flex',
     flexDirection: 'column',
