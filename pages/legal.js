@@ -94,7 +94,7 @@ export default function Legal() {
           <Head>
         <title>LEGAL</title>
         <meta name="description" content="Terms & Conditions and Privacy Policy of Khaliil.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
     <div className="content">
       <h2 id="terms-conditions">TERMS & CONDITIONS</h2>
