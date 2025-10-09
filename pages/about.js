@@ -1,9 +1,17 @@
-import Head from 'next/head';
+import { useEffect, useState } from 'react';
 
-export default function AboutPage({ pageData }) {
+export default function AboutPage() {
+  const [data, setData] = useState({ title: '', content: [] });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const allPages = window.__NEXT_DATA__;
+      setData(allPages.about);
+    }
+  }, []);
+
   return (
-    <>
-      <Head>
+          <Head>
         <title>{pageData.title}</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,36 +35,14 @@ export default function AboutPage({ pageData }) {
         <meta name="twitter:title" content="Khaliil" />
         <meta name="twitter:description" content={pageData.description} />
         <meta name="twitter:image" content="" />
-        <meta name="twitter:site" content="@khaliildiab" />
-        <meta name="twitter:creator" content="@khaliildiab" />
       </Head>
-
-      <div className="about-content">
-        <h2>{pageData.title}</h2>
-        {pageData.content.map((paragraph, i) => (
-          <p key={i}>{paragraph}</p>
-        ))}
-      </div>
-    </>
+    
+    <div className="about-content">
+      <h2>{data.title}</h2>
+      {data.content.map((p, i) => (
+        <p key={i}>{p}</p>
+      ))}
+    </div>
   );
 }
 
-// This function runs at build time and passes props to the page
-export async function getStaticProps() {
-  const pageData = {
-    title: "ABOUT",
-    description: "Khaliil's Official Website",
-    content: [
-      "Hey, I’m Khaliil (Khalil), a 17-year-old creator, coder, and dreamer. I’m deeply obsessed with how things are built — from websites to apps, and I spend most of my time learning, designing, and coding. My goal is to become a software engineer and create digital experiences that feel smart, clean, and full of meaning.",
-      "This website is a reflection of me, my ideas, my projects, and the moments I capture. I don’t travel often, but when I do, I bring back what inspires me most: the visuals, the sounds, and the stories behind every place.",
-      "Everything here is built and shared by me. And yes — it’s completely legal to have a site like this at 17. I own my content and handle everything myself, responsibly.",
-      "Welcome to my world: part code, part art, and completely me."
-    ]
-  };
-
-  return {
-    props: {
-      pageData
-    }
-  };
-}
