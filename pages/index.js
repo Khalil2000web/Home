@@ -42,15 +42,15 @@ export default function HomePage() {
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
-    paddingBottom: '100px',
+    paddingBottom: '150px',
   }}
 >
   <CustomVideo
-    src="https://ik.imagekit.io/cx6yav04a/E9D48422-5E4E-4D8D-BFC0-8C6AA2DCC1F4-2.mp4"
+    src="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4"
   />
 
   <a
-    href="https://tour.khaliil.com"
+    href="https://tour.khaliil.com/"
     style={{
       width: '80px',
       paddingTop: '10px',
@@ -60,9 +60,10 @@ export default function HomePage() {
       textDecoration: 'none',
       border: '1px solid white',
     color: 'white',
+    wordWrap: 'break-word',
     }}
   >
-    TOUR
+    CHECK OUT MY RECENT ADVENTURE! — TOUR 2025
   </a>
 </div>
       </main>
