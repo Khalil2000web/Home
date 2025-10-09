@@ -4,7 +4,6 @@ export const pagesData = {
     description: "Khaliil's Official Website",
     content: [
       "Welcome to my world: part code, part art, and completely me."
-
     ]
   },
   about: {
@@ -18,7 +17,7 @@ export const pagesData = {
     ]
   },
   legal: {
-title: "LEGAL",
+    title: "LEGAL",
     description: "Khaliil's Official Website",
     terms: {
       title: "TERMS & CONDITIONS",
@@ -59,7 +58,7 @@ title: "LEGAL",
         { type: 'p', text: "Owner may update Terms at any time without notice." },
         { type: 'p', text: "<strong>13. CONTACT INFORMATION</strong>" },
         { type: 'p', text: "Contact: <a href='mailto:help@khaliil.com'>help@khaliil.com</a>." },
-        { type: 'p', text: "<strong>ACCEPTANCE OF TERMS</strong> By using the Site, you agree to comply with these Terms." },
+        { type: 'p', text: "<strong>ACCEPTANCE OF TERMS</strong> By using the Site, you agree to comply with these Terms." }
       ]
     },
     privacy: {
@@ -85,7 +84,8 @@ title: "LEGAL",
         { type: 'p', text: "Policy may update; updates posted with revised effective date." },
         { type: 'p', text: "<strong>8. CONTACT</strong>" },
         { type: 'p', text: "For questions contact <a href='mailto:help@khaliil.com'>help@khaliil.com</a>. All emails are from official accounts." },
-        { type: 'p', text: "<strong>ACCEPTANCE OF PRIVACY POLICY:</strong> By using this Site, you acknowledge you have read and understood this Policy." },
-    ]
+        { type: 'p', text: "<strong>ACCEPTANCE OF PRIVACY POLICY:</strong> By using this Site, you acknowledge you have read and understood this Policy." }
+      ]
+    }
   }
 };
