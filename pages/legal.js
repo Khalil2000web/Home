@@ -1,8 +1,10 @@
+// pages/legal.js
 import Head from 'next/head';
 import { useEffect } from 'react';
+import { pagesData } from '../data/pagesData'; // import directly
 
-export default function Legal({ allPages }) {
-  const pageData = allPages.legal;
+export default function Legal() {
+  const pageData = pagesData.legal; // always available at build time
 
   useEffect(() => {
     const btn = document.getElementById('scrollBtn');
@@ -95,7 +97,7 @@ export default function Legal({ allPages }) {
       <Head>
         <title>{pageData.title}</title>
         <meta name="description" content={pageData.description} />
-      <meta charSet="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="keywords" content="Khaliil, Official Website, Portfolio, Developer, Designer" />
         <meta name="author" content="Khaliil" />
@@ -116,9 +118,10 @@ export default function Legal({ allPages }) {
         <meta name="twitter:title" content="Khaliil" />
         <meta name="twitter:description" content={pageData.description} />
         <meta name="twitter:image" content="" />    
-  </Head>
+      </Head>
 
       <div className="content">
+        {/* Terms & Conditions */}
         <h2 id="terms-conditions">{pageData.terms.title}</h2>
         {pageData.terms.content.map((block, i) => {
           if (block.type === 'p') return <p key={i} dangerouslySetInnerHTML={{ __html: block.text }} />;
@@ -130,6 +133,7 @@ export default function Legal({ allPages }) {
           return null;
         })}
 
+        {/* Privacy Policy */}
         <h2 id="privacy-policy">{pageData.privacy.title}</h2>
         {pageData.privacy.content.map((block, i) => {
           if (block.type === 'p') return <p key={i} dangerouslySetInnerHTML={{ __html: block.text }} />;
@@ -141,6 +145,7 @@ export default function Legal({ allPages }) {
           return null;
         })}
 
+        {/* Scroll Button */}
         <button id="scrollBtn" aria-label="Jump to section" style={{
           position: 'fixed',
           bottom: '55px',
@@ -160,16 +165,8 @@ export default function Legal({ allPages }) {
         }}>
           <span className="btn-text">Privacy Policy</span>
           <span className="arrow" aria-hidden="true" style={{ fontSize: '20px' }}>↓</span>
-        </button>      </div>
+        </button>
+      </div>
     </>
   );
 }
-
-
-
-
-
-
-
-
-
