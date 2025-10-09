@@ -130,7 +130,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
 
       {!isPlaying && !error && (
         <button className="play-btn" onClick={togglePlay}>
-          ▶
+          PLAY
         </button>
       )}
 
@@ -152,7 +152,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
           z-index: 10;
         }
         .sound-btn img {
-          width: 23px;
+          width: 19px;
           user-select:none;
           user-drag:none
         }
