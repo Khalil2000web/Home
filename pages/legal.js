@@ -1,11 +1,8 @@
 // pages/legal.js
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { pagesData } from '../data/pagesData'; // import directly
 
 export default function Legal() {
-  const pageData = pagesData.legal; // always available at build time
-
   useEffect(() => {
     const btn = document.getElementById('scrollBtn');
     const btnText = btn.querySelector('.btn-text');
@@ -13,7 +10,6 @@ export default function Legal() {
 
     const privacyHeading = document.getElementById('privacy-policy');
     const termsHeading = document.getElementById('terms-conditions');
-
     if (!privacyHeading || !termsHeading) return;
 
     function getDocOffset(el) {
@@ -95,17 +91,17 @@ export default function Legal() {
   return (
     <>
       <Head>
-        <title>{pageData.title}</title>
-        <meta name="description" content={pageData.description} />
+        <title>LEGAL</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Khaliil's Official Website" />
         <meta name="keywords" content="Khaliil, Official Website, Portfolio, Developer, Designer" />
         <meta name="author" content="Khaliil" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://khaliil.com/" />
 
         <meta property="og:title" content="Khaliil" />
-        <meta property="og:description" content={pageData.description} />
+        <meta property="og:description" content="Khaliil's Official Website" />
         <meta property="og:image" content="" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -116,34 +112,72 @@ export default function Legal() {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Khaliil" />
-        <meta name="twitter:description" content={pageData.description} />
-        <meta name="twitter:image" content="" />    
+        <meta name="twitter:description" content="Khaliil's Official Website" />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:site" content="@khaliildiab" />
+        <meta name="twitter:creator" content="@khaliildiab" />
       </Head>
 
       <div className="content">
-        {/* Terms & Conditions */}
-        <h2 id="terms-conditions">{pageData.terms.title}</h2>
-        {pageData.terms.content.map((block, i) => {
-          if (block.type === 'p') return <p key={i} dangerouslySetInnerHTML={{ __html: block.text }} />;
-          if (block.type === 'ul') return (
-            <ul key={i}>
-              {block.items.map((item, j) => <li key={j} dangerouslySetInnerHTML={{ __html: item }} />)}
-            </ul>
-          );
-          return null;
-        })}
+        <h2 id="terms-conditions">TERMS & CONDITIONS</h2>
+        <p><strong>LAST UPDATED ON AUGUST 10, 2025</strong></p>
+        <p><strong>INTRODUCTION</strong></p>
+        <p>Welcome to khaliil.com (hereinafter referred to as “the Site”) including all subdomains...</p>
+        <p><strong>1. ACCEPTANCE OF TERMS</strong></p>
+        <p>Accessing or using the Site constitutes your acceptance of these Terms...</p>
+        <p><strong>2. SCOPE OF TERMS AND SUBDOMAINS</strong></p>
+        <p>These Terms apply to khaliil.com and its subdomains...</p>
+        <p><strong>3. INTELLECTUAL PROPERTY RIGHTS</strong></p>
+        <p>All content is owned by the Owner...</p>
+        <p><strong>4. RESTRICTIONS ON USE</strong></p>
+        <ul>
+          <li>Downloading, copying, redistributing, or using content without permission.</li>
+          <li>Modifying or republishing content without authorization.</li>
+          <li>Using content in ways that infringe IP rights.</li>
+          <li>Misrepresenting ownership or attribution.</li>
+          <li>Disrupting site functionality, servers, or networks.</li>
+          <li>Using the Site for unlawful purposes or violating laws.</li>
+        </ul>
+        <p><strong>5. IMAGES AND VIDEOS</strong></p>
+        <p>All images/videos are exclusive works by the Owner.</p>
+        <p><strong>6. DISCLAIMER OF LIABILITY AND WARRANTIES</strong></p>
+        <p>The Site is provided 'as is' without warranties of any kind.</p>
+        <p><strong>7. THIRD-PARTY LINKS AND SERVICES</strong></p>
+        <p>The Site may include links to third-party websites. Use at your own risk.</p>
+        <p><strong>8. DATA COLLECTION AND PRIVACY</strong></p>
+        <p>We do not collect personal data directly; third-party services may collect anonymized data.</p>
+        <p><strong>9. AGE RESTRICTION</strong></p>
+        <p>The Site is intended for users aged 13 and older.</p>
+        <p><strong>10. DISPUTE RESOLUTION AND LEGAL LIMITATIONS</strong></p>
+        <p>Notify the Owner before pursuing legal action. Owner not liable for damages.</p>
+        <p><strong>11. GOVERNING LAW AND JURISDICTION</strong></p>
+        <p>These Terms are governed by Israeli law.</p>
+        <p><strong>12. AMENDMENTS</strong></p>
+        <p>Owner may update Terms at any time without notice.</p>
+        <p><strong>13. CONTACT INFORMATION</strong></p>
+        <p>Contact: <a href='mailto:help@khaliil.com'>help@khaliil.com</a>.</p>
 
-        {/* Privacy Policy */}
-        <h2 id="privacy-policy">{pageData.privacy.title}</h2>
-        {pageData.privacy.content.map((block, i) => {
-          if (block.type === 'p') return <p key={i} dangerouslySetInnerHTML={{ __html: block.text }} />;
-          if (block.type === 'ul') return (
-            <ul key={i}>
-              {block.items.map((item, j) => <li key={j} dangerouslySetInnerHTML={{ __html: item }} />)}
-            </ul>
-          );
-          return null;
-        })}
+        <h2 id="privacy-policy" style={{ paddingTop: '80px' }}>PRIVACY POLICY</h2>
+        <p><strong>EFFECTIVE DATE: AUGUST 10, 2025</strong></p>
+        <p><strong>1. INTRODUCTION</strong></p>
+        <p>We respect your privacy and are committed to transparency regarding data practices.</p>
+        <p><strong>2. DATA COLLECTION</strong></p>
+        <p>We do not collect personal data directly. No forms/sign-ups collect personal info.</p>
+        <p><strong>3. THIRD-PARTY SERVICES</strong></p>
+        <ul>
+          <li><strong>Cloudflare:</strong> Limited technical data collection for performance/security.</li>
+          <li><strong>jsDelivr (optional):</strong> Occasionally collects anonymized usage data.</li>
+        </ul>
+        <p><strong>4. EXTERNAL LINKS</strong></p>
+        <p>Not responsible for third-party content or privacy practices.</p>
+        <p><strong>5. COOKIES AND TRACKING</strong></p>
+        <p>No active tracking cookies; third-party services may use essential cookies.</p>
+        <p><strong>6. AGE RESTRICTION</strong></p>
+        <p>Intended for users aged 13+. No data collection from minors under 13.</p>
+        <p><strong>7. CHANGES TO THIS PRIVACY POLICY</strong></p>
+        <p>Policy may update; updates posted with revised effective date.</p>
+        <p><strong>8. CONTACT</strong></p>
+        <p>For questions contact <a href='mailto:help@khaliil.com'>help@khaliil.com</a>. All emails are from official accounts.</p>
 
         {/* Scroll Button */}
         <button id="scrollBtn" aria-label="Jump to section" style={{
