@@ -1,4 +1,3 @@
-Good, worked, now do this for my legal.js give me full code:
 import Head from 'next/head';
 import { useEffect } from 'react';
 
