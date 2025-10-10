@@ -92,6 +92,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   autoPlay
   loop
   muted={isMuted}
+  preload="auto"
   playsInline
   controls={false}
   disablePictureInPicture
