@@ -46,6 +46,13 @@ export default function HomePage() {
   <meta name="copyright" content="2025" />
   <meta name="referrer" content="no-referrer-when-downgrade" />
   <meta property="og:updated_time" content="2025-10-09T00:00:00+03:00" />
+  
+  <link
+  rel="preload"
+  as="video"
+  href="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4"
+  type="video/mp4"
+/>
 </Head>
       <main>
         <div className="m6">
