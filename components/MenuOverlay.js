@@ -9,19 +9,24 @@ export default function MenuOverlay() {
   const buttonRef = useRef(null);
   const router = useRouter();
 
+  // Set active page based on route
   useEffect(() => {
-    const current = router.pathname === '/' ? 'HOME' : router.pathname.replace('/', '').toUpperCase();
+    const current =
+      router.pathname === '/'
+        ? '' // no HOME after PAGES / on homepage
+        : router.pathname.replace('/', '').toUpperCase();
     setActivePage(current);
   }, [router.pathname]);
 
   const handleToggle = () => setMenuOpen(!menuOpen);
 
   const handleLinkClick = (page) => {
-    setActivePage(page);
+    setActivePage(page === 'HOME' && router.pathname === '/' ? '' : page);
     setMenuOpen(false);
-    buttonRef.current.focus(); // return focus for accessibility
+    buttonRef.current.focus(); // return focus to button
   };
 
+  // Close menu on ESC
   useEffect(() => {
     const handleEsc = (e) => e.key === 'Escape' && setMenuOpen(false);
     window.addEventListener('keydown', handleEsc);
@@ -51,16 +56,32 @@ export default function MenuOverlay() {
         aria-hidden={!menuOpen}
       >
         <nav className="menu-links">
-          {['HOME', 'ABOUT', 'TOUR', 'CONTACT'].map((page) => (
-            <Link
-              key={page}
-              href={page === 'HOME' ? '/' : `/${page.toLowerCase()}`}
-              className={`menu-link ${activePage === page ? 'active' : ''}`}
-              onClick={() => handleLinkClick(page)}
-            >
-              {page}
-            </Link>
-          ))}
+          {/* HOME link still visible */}
+          <Link
+            href="/"
+            className={`menu-link ${activePage === '' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('HOME')}
+          >
+            HOME
+          </Link>
+
+          <Link
+            href="/about"
+            className={`menu-link ${activePage === 'ABOUT' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('ABOUT')}
+          >
+            ABOUT
+          </Link>
+
+          <a
+            href="https://tour.khaliil.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`menu-link ${activePage === 'TOUR' ? 'active' : ''}`}
+            onClick={() => handleLinkClick('TOUR')}
+          >
+            TOUR
+          </a>
         </nav>
       </div>
     </>
