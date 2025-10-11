@@ -10,11 +10,27 @@ export default async function handler(req, res) {
     const { nominee } = req.body;
     if (!nominee) return res.status(400).json({ message: 'Missing nominee' });
 
-    const { error } = await supabase
+    const { data, error } = await supabase
       .from('votes')
-      .upsert([{ nominee, count: 1 }], { onConflict: ['nominee'] });
+      .select('*')
+      .eq('nominee', nominee);
 
-    if (error) return res.status(500).json({ message: 'Failed to save vote', error });
+    if (error) return res.status(500).json({ message: 'Supabase query error', error });
+
+    if (data.length) {
+      const { error: updateError } = await supabase
+        .from('votes')
+        .update({ count: data[0].count + 1 })
+        .eq('nominee', nominee);
+
+      if (updateError) return res.status(500).json({ message: 'Update failed', error: updateError });
+    } else {
+      const { error: insertError } = await supabase
+        .from('votes')
+        .insert([{ nominee, count: 1 }]);
+
+      if (insertError) return res.status(500).json({ message: 'Insert failed', error: insertError });
+    }
 
     return res.status(200).json({ message: 'Vote saved' });
   }
