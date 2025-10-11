@@ -6,9 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
 
-<header className="dhx">
 <MenuOverlay />
-</header>
     
       <Component {...pageProps} />
 
