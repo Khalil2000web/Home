@@ -51,7 +51,7 @@ export default function MenuOverlay() {
         PAGES{activePage ? ` / ${activePage}` : ' /'}
       </button>
       
-      <dic className="menu-cover"></div>
+      <div className="menu-cover"></div>
       
       <div
         id="main-menu"
