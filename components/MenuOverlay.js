@@ -8,11 +8,11 @@ export default function MenuOverlay() {
   const buttonRef = useRef(null);
   const router = useRouter();
 
-  // Determine active page from the current route
+
   const getActivePage = () => {
     switch (router.pathname) {
       case '/':
-        return ''; // homepage, no HOME after slash
+        return '';
       case '/about':
         return 'ABOUT';
       case '/legal':
@@ -48,7 +48,7 @@ export default function MenuOverlay() {
         aria-controls="main-menu"
         aria-label={menuOpen ? 'Close pages menu' : 'Open pages menu'}
       >
-        PAGES{activePage ? ` / ${activePage}` : '/'}
+        PAGES{activePage ? ` / ${activePage}` : ' /'}
       </button>
 
       <div
