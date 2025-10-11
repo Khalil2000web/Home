@@ -4,25 +4,42 @@ import path from 'path'
 const votesFile = path.join(process.cwd(), 'data', 'votes.json')
 
 export default function handler(req, res) {
-  if (req.method === 'POST') {
-    const { nominee } = req.body
-    const data = fs.existsSync(votesFile)
-      ? JSON.parse(fs.readFileSync(votesFile))
-      : {}
+  try {
+    if (req.method === 'POST') {
+      const { nominee } = req.body
+      if (!nominee) {
+        return res.status(400).json({ message: 'Missing nominee' })
+      }
 
-    data[nominee] = (data[nominee] || 0) + 1
+      // make sure file exists before reading
+      if (!fs.existsSync(votesFile)) {
+        fs.mkdirSync(path.dirname(votesFile), { recursive: true })
+        fs.writeFileSync(votesFile, '{}')
+      }
 
-    fs.writeFileSync(votesFile, JSON.stringify(data, null, 2))
+      const raw = fs.readFileSync(votesFile)
+      const data = raw.length ? JSON.parse(raw) : {}
 
-    return res.status(200).json({ message: 'Vote saved' })
+      data[nominee] = (data[nominee] || 0) + 1
+
+      fs.writeFileSync(votesFile, JSON.stringify(data, null, 2))
+
+      return res.status(200).json({ message: 'Vote saved' })
+    }
+
+    if (req.method === 'GET') {
+      if (!fs.existsSync(votesFile)) {
+        return res.status(200).json({})
+      }
+      const raw = fs.readFileSync(votesFile)
+      const data = raw.length ? JSON.parse(raw) : {}
+      return res.status(200).json(data)
+    }
+
+    res.setHeader('Allow', ['GET', 'POST'])
+    return res.status(405).end()
+  } catch (error) {
+    console.error('API error:', error)
+    return res.status(500).json({ message: 'Internal server error' })
   }
-
-  if (req.method === 'GET') {
-    const data = fs.existsSync(votesFile)
-      ? JSON.parse(fs.readFileSync(votesFile))
-      : {}
-    return res.status(200).json(data)
-  }
-
-  return res.status(405).end()
 }
