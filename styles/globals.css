@@ -13,8 +13,8 @@
   background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
+  text-transform: uppercase;
 }
-
 
 
 .navbar, .footer {
@@ -148,6 +148,7 @@ text-align: center;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
+  text-transform: none;
 }
 
 .arrow {
