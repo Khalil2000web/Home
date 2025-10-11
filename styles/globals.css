@@ -137,20 +137,31 @@ text-decoration:underline;
 text-underline-offset:5px;
 }
 
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 767px) and (orientation: landscape) {
   .menu-links {
-    flex-direction:row;
-    max-width:50%;
-    }
-    .content p, .content li {font-size:14px;}
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 
-@media screen and (min-width:52em) {
-  .menu-overlay {
-    max-width:40%;
-    flex-direction:column;
+@media screen and (min-width: 768px) {
+  .menu-links {
+    flex-direction: column;
+    gap: 3rem;
+    }
+    .menu-overlay {
+      max-width:30%;
     }
 }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
