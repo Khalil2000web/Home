@@ -1,45 +1,44 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react';
 
 export default function Results() {
-  const [key, setKey] = useState('')
-  const [data, setData] = useState(null)
-  const [error, setError] = useState('')
+  const [votes, setVotes] = useState({});
+  const [keyInput, setKeyInput] = useState('');
+  const [authorized, setAuthorized] = useState(false);
 
-  const handleFetch = async () => {
-    if (key !== process.env.NEXT_PUBLIC_ADMIN_KEY) {
-      setError('Access denied')
-      return
+  const ADMIN_KEY = process.env.NEXT_PUBLIC_ADMIN_KEY || 'mysecret123';
+
+  useEffect(() => {
+    if (authorized) {
+      fetch('/api/vote')
+        .then(res => res.json())
+        .then(data => setVotes(data));
     }
+  }, [authorized]);
 
-    const res = await fetch('/api/vote')
-    const results = await res.json()
-    setData(results)
-  }
+  const handleKey = () => {
+    if (keyInput === ADMIN_KEY) setAuthorized(true);
+    else alert('Wrong key');
+  };
+
+  if (!authorized)
+    return (
+      <div style={{ padding: '20px' }}>
+        <h2>Enter Admin Key</h2>
+        <input value={keyInput} onChange={e => setKeyInput(e.target.value)} />
+        <button onClick={handleKey}>Submit</button>
+      </div>
+    );
 
   return (
-    <div className="results-container">
-      {!data ? (
-        <>
-          <h1>Admin Access</h1>
-          <input
-            type="password"
-            placeholder="Enter admin key"
-            value={key}
-            onChange={(e) => setKey(e.target.value)}
-          />
-          <button onClick={handleFetch}>View Results</button>
-          {error && <p>{error}</p>}
-        </>
-      ) : (
-        <div>
-          <h2>Voting Results</h2>
-          {Object.entries(data).map(([name, votes]) => (
-            <p key={name}>
-              {name}: {votes} votes
-            </p>
-          ))}
-        </div>
-      )}
+    <div style={{ padding: '20px' }}>
+      <h1>Voting Results</h1>
+      <ul>
+        {Object.entries(votes).map(([nominee, count]) => (
+          <li key={nominee}>
+            {nominee}: {count}
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
