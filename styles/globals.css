@@ -16,7 +16,7 @@
 }
 
 
-body *:not(.content, .content *) {
+body:not(.content p, .content, .content *) {
   text-transform: uppercase;
 }
 
