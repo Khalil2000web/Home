@@ -13,8 +13,13 @@
   background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
+}
+
+
+body *:not(.content, .content *) {
   text-transform: uppercase;
 }
+
 
 .navbar, .footer {
   position: fixed;
