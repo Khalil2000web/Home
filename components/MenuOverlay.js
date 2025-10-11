@@ -30,7 +30,7 @@ export default function MenuOverlay() {
 
   const handleToggle = () => setMenuOpen(!menuOpen);
 
-  // Close menu on ESC
+
   useEffect(() => {
     const handleEsc = (e) => e.key === 'Escape' && setMenuOpen(false);
     window.addEventListener('keydown', handleEsc);
@@ -48,7 +48,7 @@ export default function MenuOverlay() {
         aria-controls="main-menu"
         aria-label={menuOpen ? 'Close pages menu' : 'Open pages menu'}
       >
-        PAGES{activePage ? ` / ${activePage}` : ' /'}
+        PAGES{activePage ? ` / ${activePage}` : '/'}
       </button>
 
       <div
