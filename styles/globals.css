@@ -84,7 +84,7 @@
 
 .menu-footer {
   margin-top: auto;
-  padding: 1rem 0;
+  padding: 1.1rem 0;
   font-size: 14px;
   color: #888;
   text-transform: uppercase;letter-spacing:3px;
@@ -116,6 +116,7 @@
   flex-direction: column;
   gap: 4rem;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .menu-link {
@@ -137,5 +138,19 @@ text-underline-offset:5px;
 }
 
 
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .menu-links {
+    flex-direction:row;
+    max-width:50%;
+    }
+    .content p, .content li {font-size:14px;}
+}
+
+@media screen and (min-width:48em) {
+  .menu-overlay {
+    max-width:40%;
+    flex-direction:column;
+    }
+}
 
 
