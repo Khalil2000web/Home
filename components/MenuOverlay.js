@@ -4,32 +4,26 @@ import { useRouter } from 'next/router';
 
 export default function MenuOverlay() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activePage, setActivePage] = useState('');
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
   const router = useRouter();
 
-  // activePage always reflects the current route
-  const getActivePage = (pathname) => {
-    if (pathname === '/') return ''; // homepage
-    if (pathname === '/about') return 'ABOUT';
-    return ''; // default for safety
-  };
-
-  const [activePage, setActivePage] = useState(getActivePage(router.pathname));
-
+  // detect active page from route
   useEffect(() => {
-    setActivePage(getActivePage(router.pathname));
+    const current = router.pathname === '/' ? 'HOME' : router.pathname.replace('/', '').toUpperCase();
+    setActivePage(current);
   }, [router.pathname]);
 
   const handleToggle = () => setMenuOpen(!menuOpen);
 
-  const handleInternalLinkClick = (path) => {
+  const handleLinkClick = (page) => {
+    setActivePage(page);
     setMenuOpen(false);
-    buttonRef.current.focus();
-    router.push(path);
+    buttonRef.current.focus(); // return focus for accessibility
   };
 
-  // Close menu on ESC
+  // ESC closes menu
   useEffect(() => {
     const handleEsc = (e) => e.key === 'Escape' && setMenuOpen(false);
     window.addEventListener('keydown', handleEsc);
@@ -59,32 +53,16 @@ export default function MenuOverlay() {
         aria-hidden={!menuOpen}
       >
         <nav className="menu-links">
-          {/* HOME */}
-          <button
-            className={`menu-link ${activePage === '' ? 'active' : ''}`}
-            onClick={() => handleInternalLinkClick('/')}
-          >
-            HOME
-          </button>
-
-          {/* ABOUT */}
-          <button
-            className={`menu-link ${activePage === 'ABOUT' ? 'active' : ''}`}
-            onClick={() => handleInternalLinkClick('/about')}
-          >
-            ABOUT
-          </button>
-
-          {/* TOUR (external) */}
-          <a
-            href="https://tour.khaliil.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`menu-link ${activePage === 'TOUR' ? 'active' : ''}`}
-            onClick={() => setMenuOpen(false)}
-          >
-            TOUR
-          </a>
+          {['HOME', 'ABOUT', 'TOUR', 'CONTACT'].map((page) => (
+            <Link
+              key={page}
+              href={page === 'HOME' ? '/' : `/${page.toLowerCase()}`}
+              className={`menu-link ${activePage === page ? 'active' : ''}`}
+              onClick={() => handleLinkClick(page)}
+            >
+              {page}
+            </Link>
+          ))}
         </nav>
       </div>
     </>
