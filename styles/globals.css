@@ -16,10 +16,6 @@
 }
 
 
-body *:not(.content p, .content, .content *) {
-  text-transform: uppercase;
-}
-
 
 .navbar, .footer {
   position: fixed;
