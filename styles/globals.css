@@ -221,6 +221,7 @@ position: fixed;
   visibility: hidden;
   z-index: 100;
   top:0;left:0;
+  border-left:1px solid #fff;
 }
 
 .menu-overlay.open {
@@ -232,7 +233,7 @@ position: fixed;
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  text-align: center;
+  text-align: left;
 }
 
 .menu-link {
