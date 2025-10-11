@@ -169,7 +169,7 @@ position: fixed;
   display: flex;
   z-index: 100000;
   background-color: transparent;
-  width: 90%;padding-top:20px;
+  width: 100%;padding-top:20px;
   justify-content: space-between;
   align-items: center;
   left:50%;
@@ -194,6 +194,13 @@ position: fixed;
   font-weight: 300;
   cursor: pointer;
   font-size:20px;
+  
+  position: fixed;
+  display: flex;
+  z-index: 10000;
+
+  left:20px;
+  top:20px;
 }
 
 .menu-toggle:hover,
@@ -210,7 +217,7 @@ position: fixed;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  width:100%;height:100%;
+  width:100%;height:100vh
   visibility: hidden;
   z-index: 100;
   top:0;left:0;
