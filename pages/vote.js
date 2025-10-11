@@ -1,57 +1,56 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
-export default function VotePage() {
-  const [selected, setSelected] = useState(null)
-  const [canVote, setCanVote] = useState(true)
-  const [message, setMessage] = useState('')
+export default function Vote() {
+  const [votes, setVotes] = useState({});
+  const [message, setMessage] = useState('');
+
+  const nominees = ['Nominee1', 'Nominee2', 'Nominee3'];
 
   useEffect(() => {
-    const lastVote = localStorage.getItem('lastVoteTime')
-    if (lastVote && Date.now() - Number(lastVote) < 5 * 60 * 1000) {
-      setCanVote(false)
-      setMessage('You can vote again in 5 minutes.')
+    fetch('/api/vote')
+      .then(res => res.json())
+      .then(data => setVotes(data))
+      .catch(() => setMessage('Failed to fetch votes'));
+  }, []);
+
+  const handleVote = async (nominee) => {
+    const lastVote = localStorage.getItem('lastVote');
+    const now = Date.now();
+
+    if (lastVote && now - lastVote < 5 * 60 * 1000) {
+      setMessage('You can vote once every 5 minutes');
+      return;
     }
-  }, [])
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (!selected || !canVote) return
+    try {
+      const res = await fetch('/api/vote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nominee }),
+      });
 
-    const res = await fetch('/api/vote', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nominee: selected })
-    })
+      if (!res.ok) throw new Error('Vote failed');
 
-    if (res.ok) {
-      localStorage.setItem('lastVoteTime', Date.now().toString())
-      setCanVote(false)
-      setMessage('Thank you! Your vote has been recorded.')
-    } else {
-      setMessage('Something went wrong. Please try again.')
+      localStorage.setItem('lastVote', now);
+      setMessage('Vote saved!');
+      const data = await res.json();
+      fetch('/api/vote')
+        .then(res => res.json())
+        .then(data => setVotes(data));
+    } catch {
+      setMessage('Something went wrong. Please try again.');
     }
-  }
+  };
 
   return (
-    <div className="vote-container">
-      <h1>Vote for Best Artist</h1>
-      <form onSubmit={handleSubmit}>
-        {['Beyoncé', 'Adele', 'Taylor Swift'].map((name) => (
-          <label key={name}>
-            <input
-              type="radio"
-              name="nominee"
-              value={name}
-              onChange={() => setSelected(name)}
-            />
-            {name}
-          </label>
-        ))}
-        <button type="submit" disabled={!canVote}>
-          {canVote ? 'Submit Vote' : 'Wait 5 min'}
+    <div style={{ padding: '20px' }}>
+      <h1>Vote for your favorite!</h1>
+      {nominees.map(n => (
+        <button key={n} onClick={() => handleVote(n)} style={{ margin: '5px' }}>
+          {n} ({votes[n] || 0})
         </button>
-      </form>
+      ))}
       <p>{message}</p>
     </div>
-  )
+  );
 }
