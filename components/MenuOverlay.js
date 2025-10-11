@@ -4,26 +4,33 @@ import { useRouter } from 'next/router';
 
 export default function MenuOverlay() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activePage, setActivePage] = useState('');
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
   const router = useRouter();
 
-  // detect active page from route
+  // Determine active page from the current route
+  const getActivePage = () => {
+    switch (router.pathname) {
+      case '/':
+        return ''; // homepage, no HOME after slash
+      case '/about':
+        return 'ABOUT';
+      case '/legal':
+        return 'LEGAL';
+      default:
+        return ''; 
+    }
+  };
+
+  const [activePage, setActivePage] = useState(getActivePage());
+
   useEffect(() => {
-    const current = router.pathname === '/' ? 'HOME' : router.pathname.replace('/', '').toUpperCase();
-    setActivePage(current);
+    setActivePage(getActivePage());
   }, [router.pathname]);
 
   const handleToggle = () => setMenuOpen(!menuOpen);
 
-  const handleLinkClick = (page) => {
-    setActivePage(page);
-    setMenuOpen(false);
-    buttonRef.current.focus(); // return focus for accessibility
-  };
-
-  // ESC closes menu
+  // Close menu on ESC
   useEffect(() => {
     const handleEsc = (e) => e.key === 'Escape' && setMenuOpen(false);
     window.addEventListener('keydown', handleEsc);
@@ -53,16 +60,43 @@ export default function MenuOverlay() {
         aria-hidden={!menuOpen}
       >
         <nav className="menu-links">
-          {['HOME', 'ABOUT', 'TOUR', 'CONTACT'].map((page) => (
-            <Link
-              key={page}
-              href={page === 'HOME' ? '/' : `/${page.toLowerCase()}`}
-              className={`menu-link ${activePage === page ? 'active' : ''}`}
-              onClick={() => handleLinkClick(page)}
-            >
-              {page}
-            </Link>
-          ))}
+          {/* HOME */}
+          <Link
+            href="/"
+            className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            HOME
+          </Link>
+
+          {/* ABOUT */}
+          <Link
+            href="/about"
+            className={`menu-link ${router.pathname === '/about' ? 'active' : ''}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            ABOUT
+          </Link>
+
+          {/* LEGAL */}
+          <Link
+            href="/legal"
+            className={`menu-link ${router.pathname === '/legal' ? 'active' : ''}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            LEGAL
+          </Link>
+
+          {/* TOUR (external) */}
+          <a
+            href="https://tour.khaliil.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="menu-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            TOUR
+          </a>
         </nav>
       </div>
     </>
