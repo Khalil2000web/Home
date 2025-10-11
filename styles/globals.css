@@ -40,7 +40,7 @@
 }
 
 @media screen and (min-width:46em) {.content {max-width: 70%;}}
-
+@media acreen and (min-width:44em) {.content p, .content li {font-size:13px;}}
 
 .menu-toggle {
   background: none;
@@ -96,7 +96,7 @@
   left:0;
   width:100vw;
   height:100vh;
-  background: #fff;
+  background: #000;
   opacity: 0;
   visibility: hidden;
 }
