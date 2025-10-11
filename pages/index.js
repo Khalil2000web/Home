@@ -55,19 +55,11 @@ export default function HomePage() {
 />
 </Head>
       <main>
-        <div className="m6">
-          <a href="https://tour.khaliil.com/">
-            <p>
-              The road is drawn across silent maps cities wait in shadows lights
-              rest before the storm and soon the journey begins.
-            </p>
-          </a>
-        </div>
 
 <div className="manivi"
   style={{
     width: '100%',
-    paddingTop: '60px',
+    paddingTop: '90px',
     display: 'flex',
     flexDirection: 'column',
     gap: '40px',
