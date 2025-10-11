@@ -69,6 +69,16 @@ export default function MenuOverlay() {
           >
             HOME
           </Link>
+          
+          <a
+            href="https://tour.khaliil.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="menu-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            TOUR
+          </a>
 
           <Link
             href="/about"
@@ -86,15 +96,6 @@ export default function MenuOverlay() {
             LEGAL
           </Link>
 
-          <a
-            href="https://tour.khaliil.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="menu-link"
-            onClick={() => setMenuOpen(false)}
-          >
-            TOUR
-          </a>
         </nav>
         
   <div className="menu-footer">
