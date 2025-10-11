@@ -51,7 +51,7 @@ export default function MenuOverlay() {
         PAGES{activePage ? ` / ${activePage}` : ' /'}
       </button>
       
-      <div className="menu-cover"></div>
+<div className={`menu-cover ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(false)}></div>
       
       <div
         id="main-menu"
