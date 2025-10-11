@@ -137,7 +137,7 @@ text-decoration:underline;
 text-underline-offset:5px;
 }
 
-@media screen and (max-width: 789px) and (orientation: landscape) {
+@media screen and (max-width: 810px) and (orientation: landscape) {
   .menu-links {
     flex-direction: row;
     flex-wrap: wrap;
@@ -149,7 +149,7 @@ text-underline-offset:5px;
     }
 }
 
-@media screen and (min-width: 790px) {
+@media screen and (min-width: 811px) {
   .menu-links {
     flex-direction: column;
     gap: 3rem;
