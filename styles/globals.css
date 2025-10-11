@@ -160,3 +160,28 @@ text-align: center;
 
 @media screen and (min-width:46em) {.manivi {max-width:70%;}}
 
+
+
+.dhx {
+position: fixed;
+  display: flex;
+  z-index: 9999999;
+  background-color: transparent;
+  width: 100%;
+  text-transform: uppercase;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-btn {background:transparent;color:var(--text-color);padding:5px;border:none;}
+.menu-btn svg {display:block;color:#fff;width:28px;}
+.header-link {color:#fff;cursor:pointer;text-decoration:none;font-size:20px;}
+
+
+
+
+
+
+
+
+
