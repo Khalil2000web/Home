@@ -5,7 +5,7 @@ export default function Results() {
   const [keyInput, setKeyInput] = useState('');
   const [authorized, setAuthorized] = useState(false);
 
-  const ADMIN_KEY = process.env.NEXT_PUBLIC_ADMIN_KEY || 'mysecret123';
+  const ADMIN_KEY = process.env.NEXT_PUBLIC_ADMIN_KEY || 'crt';
 
   useEffect(() => {
     if (authorized) {
