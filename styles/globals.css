@@ -137,16 +137,19 @@ text-decoration:underline;
 text-underline-offset:5px;
 }
 
-@media screen and (max-width: 767px) and (orientation: landscape) {
+@media screen and (max-width: 789px) and (orientation: landscape) {
   .menu-links {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
   }
+      .menu-overlay {
+      max-width:40%;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 790px) {
   .menu-links {
     flex-direction: column;
     gap: 3rem;
