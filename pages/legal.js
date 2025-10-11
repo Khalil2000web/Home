@@ -246,6 +246,7 @@ export default function Legal() {
         display: 'flex',
         alignItems: 'center',
         gap: '6px',
+        display: 'none',
         fontSize: '13px',
         textTransform: 'uppercase',
         zIndex: 9999,
