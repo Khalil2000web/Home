@@ -91,9 +91,19 @@
   text-transform: uppercase;letter-spacing:3px;
 }
 
+.menu-cover {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
 
-.menu-overlay.open {
-  opacity: 1;
+.menu-overlay.open, .menu-cover.open {
+  opacity: 0.6;
   visibility: visible;
 }
 
