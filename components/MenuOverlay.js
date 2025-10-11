@@ -60,7 +60,6 @@ export default function MenuOverlay() {
         aria-hidden={!menuOpen}
       >
         <nav className="menu-links">
-          {/* HOME */}
           <Link
             href="/"
             className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
@@ -69,7 +68,6 @@ export default function MenuOverlay() {
             HOME
           </Link>
 
-          {/* ABOUT */}
           <Link
             href="/about"
             className={`menu-link ${router.pathname === '/about' ? 'active' : ''}`}
@@ -78,7 +76,6 @@ export default function MenuOverlay() {
             ABOUT
           </Link>
 
-          {/* LEGAL */}
           <Link
             href="/legal"
             className={`menu-link ${router.pathname === '/legal' ? 'active' : ''}`}
@@ -87,7 +84,6 @@ export default function MenuOverlay() {
             LEGAL
           </Link>
 
-          {/* TOUR (external) */}
           <a
             href="https://tour.khaliil.com"
             target="_blank"
@@ -98,6 +94,11 @@ export default function MenuOverlay() {
             TOUR
           </a>
         </nav>
+        
+  <div className="menu-footer">
+    © 2025 KHALIIL
+  </div>
+        
       </div>
     </>
   );
