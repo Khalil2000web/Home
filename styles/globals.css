@@ -10,7 +10,7 @@ html, body {
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
-  background-color: background: linear-gradient(to bottom, #000 0%, #111 40%, #fafafa 100%);;
+  background-color: linear-gradient(to bottom, #000 0%, #111 40%, #fafafa 100%);
   color: var(--text-color);
   font-family: var(--font-main);
   text-transform: uppercase;
