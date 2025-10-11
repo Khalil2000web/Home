@@ -137,7 +137,6 @@ text-decoration:underline;
 text-underline-offset:5px;
 }
 
-/* Phones in landscape only */
 @media screen and (max-device-width: 810px) and (orientation: landscape) {
   .menu-links {
     flex-direction: row;
@@ -147,20 +146,19 @@ text-underline-offset:5px;
   }
 
   .menu-overlay {
-    max-width: 40%;
+    max-width: 40%; /* smaller width in landscape phones */
   }
 }
 
-/* All other devices (including phones portrait, tablets, desktops) */
-@media screen and (min-device-width: 811px), 
-       screen and (max-device-width: 810px) and (orientation: portrait) {
+/* All other devices (tablets & desktops) */
+@media screen and (min-device-width: 811px) {
   .menu-links {
     flex-direction: column;
     gap: 3rem;
   }
 
   .menu-overlay {
-    max-width: 30%;
+    max-width: 30%; /* sidebar width for bigger screens */
   }
 }
     
