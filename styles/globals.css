@@ -167,9 +167,9 @@ position: fixed;
   display: flex;
   z-index: 9999999;
   background-color: transparent;
-  width: 100%;
+  width: 90%;padding-top:20px;
   text-transform: uppercase;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
