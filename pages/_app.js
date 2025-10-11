@@ -8,8 +8,6 @@ export default function App({ Component, pageProps }) {
 
 <header className="dhx">
 <MenuOverlay />
-
-<Link className="header-link" href="/">KHALIIL</Link>
 </header>
     
       <Component {...pageProps} />
