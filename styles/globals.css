@@ -14,7 +14,6 @@
   color: #fff;
   font-family: var(--font-main);
   text-transform: uppercase;
-  mix-blend-mode: difference;
 }
 
 p, a, i, strong, h1, h2, h3, li {
