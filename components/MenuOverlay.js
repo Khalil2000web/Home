@@ -72,7 +72,6 @@ export default function MenuOverlay() {
           
           <a
             href="https://tour.khaliil.com"
-            target="_blank"
             rel="noopener noreferrer"
             className="menu-link"
             onClick={() => setMenuOpen(false)}
