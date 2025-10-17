@@ -98,8 +98,11 @@
   width:100vw;
   height:100vh;
   background: #000;
-  opacity: 0;z-index:90;
+  opacity: 0;
+  z-index:90;
   visibility: hidden;
+  touch-action:none;
+  pointer-events:none;
 }
 
 .menu-overlay.open {
