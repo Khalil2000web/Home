@@ -115,13 +115,13 @@
 .menu-links {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   text-align: center;
   flex-wrap: wrap;
 }
 
 .menu-link {
-  font-size: 18px;
+  font-size: 21px;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
