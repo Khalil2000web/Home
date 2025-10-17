@@ -134,39 +134,39 @@ export default function Legal() {
   <meta property="og:updated_time" content="2025-10-09T00:00:00+03:00" />
 </Head>
 
-    <div className="content">
-      <h2 id="terms-conditions">TERMS & CONDITIONS</h2>
-      <p><strong>LAST UPDATED ON AUGUST 10, 2025</strong></p>
+<div className="content">
+  <h2 id="terms-conditions">TERMS & CONDITIONS</h2>
+  <p><strong>Last updated on August 10, 2025</strong></p>
 
-      <p><strong>INTRODUCTION</strong></p>
-      <p>Welcome to khaliil.com (hereinafter referred to as “the Site”), including all associated subdomains such as tour.khaliil.com. By accessing or using the Site or any of its subdomains, you (“User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you must not use the Site or any subdomain.</p>
+  <p><strong>Introduction</strong></p>
+  <p>Welcome to khaliil.com (hereinafter referred to as “the Site”), including all associated subdomains such as tour.khaliil.com. By accessing or using the Site or any of its subdomains, you (“User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you must not use the Site or any subdomain.</p>
 
-      <p><strong>1. ACCEPTANCE OF TERMS</strong></p>
-      <p>Accessing or using the Site or its subdomains constitutes your acceptance of these Terms, which may be updated at any time without prior notice. It is your responsibility to review these Terms regularly to stay informed of any changes.</p>
+  <p><strong>1. Acceptance of Terms</strong></p>
+  <p>Accessing or using the Site or its subdomains constitutes your acceptance of these Terms, which may be updated at any time without prior notice. It is your responsibility to review these Terms regularly to stay informed of any changes.</p>
 
-      <p><strong>2. SCOPE OF TERMS AND SUBDOMAINS</strong></p>  
-      <p>These Terms apply to the main domain <a href="/">khaliil.com</a> and all its subdomains, including but not limited to tour.khaliil.com (which hosts pages related to trips). Additionally, these Terms cover any other subdomains used by the Owner, Khaliil, for testing or development purposes that are not publicly accessible via direct links from the main Site or the tour subdomain. All content and features on these domains are covered by these Terms.</p>
-      
-      <p><strong>3. INTELLECTUAL PROPERTY RIGHTS</strong></p>
-      <p><strong>3.1 OWNERSHIP OF CONTENT</strong></p>
-      <p><strong>All content on the Site and its subdomains—including text, images, videos, designs, fonts, and other materials—are exclusively owned by the Owner, Khaliil, or used under valid licenses. This includes licensed fonts. The domain name is not currently trademarked but remains the sole property of the Owner.</strong></p>
+  <p><strong>2. Scope of Terms and Subdomains</strong></p>  
+  <p>These Terms apply to the main domain <a href="/">khaliil.com</a> and all its subdomains, including but not limited to tour.khaliil.com (which hosts pages related to trips). Additionally, these Terms cover any other subdomains used by the Owner, Khaliil, for testing or development purposes that are not publicly accessible via direct links from the main Site or the tour subdomain. All content and features on these domains are covered by these Terms.</p>
+  
+  <p><strong>3. Intellectual Property Rights</strong></p>
+  <p><strong>3.1 Ownership of Content</strong></p>
+  <p><strong>All content on the Site and its subdomains—including text, images, videos, designs, fonts, and other materials—are exclusively owned by the Owner, Khaliil, or used under valid licenses. This includes licensed fonts. The domain name is not currently trademarked but remains the sole property of the Owner.</strong></p>
 
-      <p><strong>3.2 COPYRIGHT</strong></p>
-      <p>The Site’s content is protected under Israeli Copyright Law (2007) and international intellectual property laws. Unauthorized copying, distribution, modification, or use of any Site content is strictly prohibited and may result in legal action. Copyright protection applies for the lifetime of the author plus 70 years posthumously.</p>
+  <p><strong>3.2 Copyright</strong></p>
+  <p>The Site’s content is protected under Israeli Copyright Law (2007) and international intellectual property laws. Unauthorized copying, distribution, modification, or use of any Site content is strictly prohibited and may result in legal action. Copyright protection applies for the lifetime of the author plus 70 years posthumously.</p>
 
-      <p><strong>3.3 TRADEMARKS</strong></p>
-      <p>While the domain is not trademarked, any logos, service marks, or other marks displayed remain the property of the Owner or relevant third parties. No permission to use any marks is granted without explicit written consent.</p>
+  <p><strong>3.3 Trademarks</strong></p>
+  <p>While the domain is not trademarked, any logos, service marks, or other marks displayed remain the property of the Owner or relevant third parties. No permission to use any marks is granted without explicit written consent.</p>
 
-      <p><strong>4. RESTRICTIONS ON USE</strong></p>
-      <p><strong>Users are prohibited from:</strong></p>
-      <ul>
-        <li>Downloading, copying, redistributing, or using any images, videos, text, designs, fonts, or other content without explicit written permission from the Owner.</li>
-        <li>Modifying or republishing any Site content without authorization.</li>
-        <li>Using the Site or its content in ways that infringe intellectual property rights of the Owner or others.</li>
-        <li>Misrepresenting ownership or attribution of any Site content.</li>
-        <li>Disrupting Site functionality, servers, or networks.</li>
-        <li>Using the Site for unlawful purposes or violating applicable laws or regulations.</li>
-      </ul>
+  <p><strong>4. Restrictions on Use</strong></p>
+  <p><strong>Users are prohibited from:</strong></p>
+  <ul>
+    <li>Downloading, copying, redistributing, or using any images, videos, text, designs, fonts, or other content without explicit written permission from the Owner.</li>
+    <li>Modifying or republishing any Site content without authorization.</li>
+    <li>Using the Site or its content in ways that infringe intellectual property rights of the Owner or others.</li>
+    <li>Misrepresenting ownership or attribution of any Site content.</li>
+    <li>Disrupting Site functionality, servers, or networks.</li>
+    <li>Using the Site for unlawful purposes or violating applicable laws or regulations.</li>
+  </ul>
 
       <p><strong>5. IMAGES AND VIDEOS</strong></p>
       <p>All images and videos across the Site and subdomains are exclusive works by the Owner unless otherwise noted. Unauthorized use may lead to legal action.</p>
