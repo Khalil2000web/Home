@@ -4,25 +4,19 @@ export default function AnimatedBackground() {
   const bgRef = useRef();
 
   useEffect(() => {
-    let frame;
-    const gradientColors = [
-      "#000000",
-      "#0a0a0a",
-      "#111111",
-      "#080808",
-      "#000000",
-    ];
-    let step = 0;
+    let start = null;
 
-    const animate = () => {
-      const nextStep = (step + 1) % gradientColors.length;
-      bgRef.current.style.background = `linear-gradient(120deg, ${gradientColors[step]}, ${gradientColors[nextStep]})`;
-      step = nextStep;
-      frame = requestAnimationFrame(() => setTimeout(animate, 2000));
+    const animate = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = (timestamp - start) / 20000; // full cycle in 20s
+      // use sine function to smoothly oscillate colors
+      const color1 = Math.floor(0 + Math.sin(progress * Math.PI * 2) * 5);  // black -> very dark gray
+      const color2 = Math.floor(0 + Math.cos(progress * Math.PI * 2) * 5);  // black -> slightly lighter
+      bgRef.current.style.background = `linear-gradient(120deg, rgb(${color1},${color1},${color1}), rgb(${color2},${color2},${color2}))`;
+      requestAnimationFrame(animate);
     };
 
-    animate();
-    return () => cancelAnimationFrame(frame);
+    requestAnimationFrame(animate);
   }, []);
 
   return (
