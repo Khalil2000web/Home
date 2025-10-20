@@ -12,18 +12,7 @@
   color: var(--text-color);
   font-family: var(--font-main);
   text-transform: uppercase;
-  
-  background: linear-gradient(120deg, #000000, #0a0a0a, #1a1a2e, #0a0a0a, #000000);
-  background-size: 400% 400%;
-  animation: smoothColorFlow 60s ease infinite;
 }
-
-@keyframes smoothColorFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 
 .content {width:100%;max-width:93%;padding:0;margin:0 auto;padding-top:110px;padding-bottom: 150px;line-height: 1.8;}
 .content h2 {
