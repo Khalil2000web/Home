@@ -13,7 +13,7 @@
   font-family: var(--font-main);
   text-transform: uppercase;
 
-  background: linear-gradient(-45deg, #000000, #050505, #0a0a0a, #0f0f0f);
+  background: linear-gradient(-45deg, #000000, #0b0b0f, #0f0a12, #080810);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
