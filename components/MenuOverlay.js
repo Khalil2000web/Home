@@ -17,6 +17,8 @@ export default function MenuOverlay() {
         return 'ABOUT';
       case '/legal':
         return 'LEGAL';
+      case '/_error':
+        return '_ERROR';
       default:
         return ''; 
     }
