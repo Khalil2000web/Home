@@ -9,10 +9,19 @@
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
   text-size-adjust: none;
-  background: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
   text-transform: uppercase;
+  
+  background: linear-gradient(115deg, #dcdcdc, #ffffff, #b3b3b3, #e6e6e6, #cccccc);
+  background-size: 400% 400%;
+  animation: chromeShine 8s ease infinite;
+}
+
+@keyframes chromeShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 
