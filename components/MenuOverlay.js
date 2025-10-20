@@ -8,7 +8,6 @@ export default function MenuOverlay() {
   const buttonRef = useRef(null);
   const router = useRouter();
 
-
   const getActivePage = () => {
     switch (router.pathname) {
       case '/':
