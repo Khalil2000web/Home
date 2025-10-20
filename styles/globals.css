@@ -16,6 +16,7 @@
   background: linear-gradient(115deg, #dcdcdc, #ffffff, #b3b3b3, #e6e6e6, #cccccc);
   background-size: 400% 400%;
   animation: chromeShine 8s ease infinite;
+  max-height:100%;
 }
 
 @keyframes chromeShine {
