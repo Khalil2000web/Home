@@ -8,10 +8,10 @@ export default function AnimatedBackground() {
 
     const animate = (timestamp) => {
       if (!start) start = timestamp;
-      const progress = (timestamp - start) / 20000; // full cycle in 20s
-      // use sine function to smoothly oscillate colors
-      const color1 = Math.floor(0 + Math.sin(progress * Math.PI * 2) * 5);  // black -> very dark gray
-      const color2 = Math.floor(0 + Math.cos(progress * Math.PI * 2) * 5);  // black -> slightly lighter
+      const progress = (timestamp - start) / 2000;
+
+      const color1 = Math.floor(0 + Math.sin(progress * Math.PI * 2) * 5);
+      const color2 = Math.floor(0 + Math.cos(progress * Math.PI * 2) * 30);
       bgRef.current.style.background = `linear-gradient(120deg, rgb(${color1},${color1},${color1}), rgb(${color2},${color2},${color2}))`;
       requestAnimationFrame(animate);
     };
