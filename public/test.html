@@ -172,17 +172,16 @@ body {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.95);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
   z-index: 100000;
 }
 
 .overlay.active {
-  opacity: 1;
+  display: flex;
   pointer-events: auto;
 }
 
