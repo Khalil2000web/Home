@@ -71,13 +71,14 @@ export default function MenuOverlay() {
             HOME
           </Link>
           
-          <Link
-            href="/"
-            className={`menu-link ${router.pathname === '/' ? 'active' : ''}`}
+          <a
+            href="https://khaliil.com"
+            rel="noopener noreferrer"
+            className="menu-link"
             onClick={() => setMenuOpen(false)}
           >
             my dishly
-          </Link>
+          </a>
           
           <a
             href="https://tour.khaliil.com"
