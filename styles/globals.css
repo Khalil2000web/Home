@@ -147,11 +147,10 @@ text-underline-offset:5px;
   }
 
   .menu-overlay {
-    max-width: 40%; /* smaller width in landscape phones */
+    max-width: 40%;
   }
 }
 
-/* All other devices (tablets & desktops) */
 @media screen and (min-device-width: 811px) {
   .menu-links {
     flex-direction: column;
@@ -159,16 +158,12 @@ text-underline-offset:5px;
   }
 
   .menu-overlay {
-    max-width: 30%; /* sidebar width for bigger screens */
+    max-width: 30%;
   }
 }
     
-    
-    
-    
-    
-    
-    
-    
-    
+.homepage_gallery {width: 90%;margin:0 auto;padding-bottom: 60px;padding-top: 100px;column-gap: 30px;}.homepage_gallery .image {display: block;width: 100%;height: auto;pointer-events: none;border-radius: 4px;margin-bottom: 20px;} @media screen and (min-width:50em) {.homepage_gallery {max-width: 80%;columns: 2;}}
+
+
+
 
