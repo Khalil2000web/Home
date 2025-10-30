@@ -55,41 +55,30 @@ export default function HomePage() {
 />
 </Head>
       <main>
-
-<div className="manivi"
-  style={{
-    width: '100%',
-    paddingTop: '90px',
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '40px',
-    margin: '0 auto',
-    paddingBottom: '150px',
-  }}
->
-  <CustomVideo
+        
+        
+<div className="homepage_gallery">
+      <img src="" alt="Home-Page Image" decoding="async" loading="eager" className="image" />
+      <img src="" alt="Home-Page Image" decoding="async" loading="eager" className="image" />
+      <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+      <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+      <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+      <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+      <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+      <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+        <CustomVideo
     src="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4"
     muteIcon="/icons/icon-mute.svg"
     unmuteIcon="/icons/icon-volume.svg"
   />
+      <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+    </div>
+        
+        
+        
+        
+      
 
-  <a
-    href="https://tour.khaliil.com/"
-    style={{
-      width: '80%',
-      paddingTop: '10px',
-      paddingBottom: '10px',
-      textAlign: 'center',
-      margin: '0 auto',
-      textDecoration: 'none',
-      border: '1px solid white',
-    color: 'white',
-    wordWrap: 'break-word',
-    }}
-  >
-    CHECK OUT MY RECENT ADVENTURE! — TOUR 2025
-  </a>
-</div>
       </main>
       </>
     );
