@@ -91,6 +91,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon }) {
   src={src}
   autoPlay
   loop
+  fetchpriority="high"
   muted={isMuted}
   preload="auto"
   playsInline
