@@ -66,19 +66,14 @@ export default function HomePage() {
       <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
       <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
       <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
-        <CustomVideo
+      <a href="https://tour.khaliil.com"> <CustomVideo
     src="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4"
     muteIcon="/icons/icon-mute.svg"
     unmuteIcon="/icons/icon-volume.svg"
-  />
+  /></a>
       <img src="" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
     </div>
         
-        
-        
-        
-      
-
       </main>
       </>
     );
