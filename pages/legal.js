@@ -133,7 +133,7 @@ return (
 <meta name="referrer" content="no-referrer-when-downgrade" />
 <link rel="preload" as="video" href="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4" type="video/mp4" />
 </Head>
-
+<main>
 <div className="content">
   <h2 id="terms-conditions">TERMS & CONDITIONS</h2>
   <p><strong>Last updated on August 10, 2025</strong></p>
@@ -233,7 +233,7 @@ return (
 
 <p style={{ paddingTop: '10px' }}><strong>Acceptance of Privacy Policy:</strong></p>
 <p>By using this Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please discontinue use of the Site.</p>
-
+</main>
       <button id="scrollBtn" aria-label="Jump to section" style={{
         position: 'fixed',
         bottom: '55px',
