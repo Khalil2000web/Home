@@ -51,7 +51,7 @@ return (
 <main>
 
 <div className="homepage_gallery">
-  <div style={{ marginBottom: '40px' }}>
+  <div style={{ marginBottom: '80px' }}>
     <CustomVideo
       src="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4"
       muteIcon="/icons/icon-mute.svg"
@@ -132,13 +132,6 @@ return (
   />
   <img
     src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2953.jpeg"
-    alt="Home-Page Image"
-    decoding="async"
-    loading="lazy"
-    className="image"
-  />
-  <img
-    src=""
     alt="Home-Page Image"
     decoding="async"
     loading="lazy"
