@@ -137,6 +137,27 @@ return (
     loading="lazy"
     className="image"
   />
+  
+  
+  <img
+  src="https://pub-366eeae0aa1144bca9919df.r2.dev/IMG_2879.jpeg"
+  alt="Home-Page Image"
+  decoding="async"
+  loading="lazy"
+  className="image"
+  onError={(e) => {
+    const parent = e.currentTarget.parentNode;
+    e.currentTarget.style.display = "none";
+    if (!parent.querySelector(".fallback-text")) {
+      const span = document.createElement("span");
+      span.className = "fallback-text";
+      span.innerText = "Failed to load image";
+      parent.appendChild(span);
+    }
+  }}
+/>
+  
+  
 </div>
 
 </main>
