@@ -68,7 +68,7 @@ export default function HomePage() {
       <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2909.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
       <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2915.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
       <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2934.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
-      <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2973.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
+      <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2937.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
       <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2938.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
       <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2944.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
       <img src="https://pub-366eeae0aa1144bca9919dfa09bb15f7.r2.dev/IMG_2945.jpeg" alt="Home-Page Image" decoding="async" loading="lazy" className="image" />
