@@ -233,7 +233,7 @@ return (
 
 <p style={{ paddingTop: '10px' }}><strong>Acceptance of Privacy Policy:</strong></p>
 <p>By using this Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree, please discontinue use of the Site.</p>
-</main>
+
       <button id="scrollBtn" aria-label="Jump to section" style={{
         position: 'fixed',
         bottom: '55px',
@@ -256,6 +256,7 @@ return (
         <span className="arrow" aria-hidden="true" style={{ fontSize: '20px' }}>↓</span>
       </button>
     </div>
+    </main>
     </>
   );
 }
