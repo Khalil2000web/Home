@@ -163,7 +163,7 @@ export default function CustomVideo({ src, muteIcon, unmuteIcon, videoLink }) {
           position: relative;
           width: 100%;
           min-height: 250px;
-          background: black;
+          background: #07170b;
         }
 
         .sound-btn {
