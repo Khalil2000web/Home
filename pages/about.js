@@ -4,7 +4,7 @@ export default function About() {
 return (
 <>
 <Head>
-<title>ABOUT: KHALIIL.COM</title>
+<title>ABOUT: Khaliil.com</title>
 <meta charSet="UTF-8" />
 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
