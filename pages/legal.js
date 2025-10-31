@@ -135,7 +135,6 @@ return (
 <link rel="preload" as="video" href="https://ik.imagekit.io/cx6yav04a/91AAD0-2855-41E9-AFBC-BF7F0B030D1B-2.mp4" type="video/mp4" />
 </Head>
 
-<main>
 <div className="content">
 
   <h2 id="terms-conditions">TERMS & CONDITIONS</h2>
@@ -266,6 +265,5 @@ return (
           </span>
         </button>
       </div>
-    </main>
   </>
 );
