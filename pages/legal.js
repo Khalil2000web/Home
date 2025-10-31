@@ -250,7 +250,7 @@ return (
             padding: '5px 9px',
             border: '1px solid #fff',
             cursor: 'pointer',
-            display: 'flex',
+            display: 'none',
             alignItems: 'center',
             gap: '6px',
             fontSize: '13px',
