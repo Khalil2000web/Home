@@ -91,6 +91,7 @@ export default function Legal() {
 
 return (
 <>
+<Head>
 <title>LEGAL: Terms & Privacy</title>
 <meta charSet="UTF-8" />
 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
