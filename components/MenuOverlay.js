@@ -69,16 +69,7 @@ export default function MenuOverlay() {
             onClick={() => setMenuOpen(false)}
           >
             HOME
-          </Link>
-          
-          <a
-            href="https://khaliil.com"
-            rel="noopener noreferrer"
-            className="menu-link"
-            onClick={() => setMenuOpen(false)}
-          >
-            my dishly
-          </a>
+          </Link
           
           <a
             href="https://tour.khaliil.com"
