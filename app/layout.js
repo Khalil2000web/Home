@@ -3,8 +3,7 @@ import localFont from 'next/font/local';
 
 const myFont = localFont({
   src: [
-    { path: '../public/fonts/BBManualMonoProTX.22d272fc.ttf', weight: '400', style: 'normal' },
-    { path: '../public/fonts/MyFont-Bold.ttf', weight: '700', style: 'normal' }
+    { path: './fonts/BBManualMonoProTX.22d272fc.ttf', weight: '400', style: 'normal' }
   ],
   variable: '--font-main'
 });
