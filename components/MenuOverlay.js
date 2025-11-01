@@ -69,7 +69,7 @@ export default function MenuOverlay() {
             onClick={() => setMenuOpen(false)}
           >
             HOME
-          </Link
+          </Link>
           
           <a
             href="https://tour.khaliil.com"
