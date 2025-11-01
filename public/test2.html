@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flaming Checkerboard</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: repeating-linear-gradient(
+        45deg,
+        #000 0, #000 25px,
+        #fff 25px, #fff 50px
+    );
+    overflow: hidden;
+  }
+
+  /* Flames layer */
+  .flames {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .flame {
+    position: absolute;
+    bottom: -100px;
+    width: 30px;
+    height: 80px;
+    background: radial-gradient(ellipse at center, 
+      rgba(255,255,0,0.9) 0%, 
+      rgba(255,140,0,0.8) 50%, 
+      rgba(255,0,0,0.7) 100%);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: rise 4s linear infinite;
+  }
+
+  @keyframes rise {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-110vh) scale(0.3);
+      opacity: 0;
+    }
+  }
+
+  /* Randomize flame positions and speeds */
+  .flame:nth-child(odd) {
+    animation-duration: 3s;
+  }
+  .flame:nth-child(even) {
+    animation-duration: 5s;
+  }
+
+  /* Center content */
+  .content {
+    position: relative;
+    z-index: 2;
+    color: #f5f5f5; /* soft white, slightly warm */
+    text-align: center;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+
+  .content h1 {
+    font-size: 3.5em;
+    letter-spacing: 2px;
+    margin-bottom: 0.3em;
+  }
+
+  .content p {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    color: #ddd;
+  }
+</style>
+</head>
+<body>
+
+<div class="flames">
+  <!-- multiple flame elements for animation -->
+  <div class="flame" style="left:10%; animation-delay:0s;"></div>
+  <div class="flame" style="left:20%; animation-delay:1s;"></div>
+  <div class="flame" style="left:35%; animation-delay:0.5s;"></div>
+  <div class="flame" style="left:50%; animation-delay:2s;"></div>
+  <div class="flame" style="left:65%; animation-delay:1.5s;"></div>
+  <div class="flame" style="left:80%; animation-delay:0.3s;"></div>
+  <div class="flame" style="left:90%; animation-delay:2.2s;"></div>
+</div>
+
+<div class="content">
+  <h1>🔥 GAME TITLE</h1>
+  <p>Enter the world of flames and fury</p>
+</div>
+
+</body>
+</html>
