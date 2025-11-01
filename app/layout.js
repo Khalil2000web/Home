@@ -3,8 +3,8 @@ import localFont from 'next/font/local';
 
 const myFont = localFont({
   src: [
-    { path: './fonts/BBManualMonoProTX.22d272fc.ttf', weight: '400', style: 'normal' },
-    { path: './fonts/BBManualMonoProTX-Bold.ttf', weight: '700', style: 'normal' } // optional bold
+    { path: '../public/fonts/BBManualMonoProTX.22d272fc.ttf', weight: '400', style: 'normal' },
+    { path: '../public/fonts/MyFont-Bold.ttf', weight: '700', style: 'normal' }
   ],
   variable: '--font-main'
 });
@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${myFont.variable}`} style={{ background: '#000', color: '#fff' }}>
+      <body className={myFont.variable}>
         {children}
       </body>
     </html>
