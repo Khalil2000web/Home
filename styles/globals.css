@@ -24,9 +24,9 @@
   word-break: break-word;
 }
 
-.content p {text-align: left;line-height: 1.8;font-size: 15px;}.content > * {word-break: break-word;}
+.content p {text-align: justify;line-height: 1.8;font-size: 15px;}.content > * {word-break: break-word;}
 
-.content ul {list-style-type: disc;margin-left: 50px;}.content li {color:var(--text-color);-webkit-text-stroke:0px;color:var(--text-color);display: list-item;font-size: 15px !important;text-align:left;line-height: 1.8;}.content a {color: var(--text-color);overflow-wrap: break-word;}.content strong {font-weight:300;text-align:left;text-align:left;font-family: var(--font-main);padding-top:8px;}
+.content ul {list-style-type: disc;margin-left: 50px;}.content li {color:var(--text-color);-webkit-text-stroke:0px;color:var(--text-color);display: list-item;font-size: 15px !important;text-align:justify;line-height: 1.8;}.content a {color: var(--text-color);overflow-wrap: break-word;}.content strong {font-weight:300;text-align:justify;text-align:left;font-family: var(--font-main);padding-top:8px;}
 
 .content, .content *, .content p {
   -webkit-text-size-adjust: none;
