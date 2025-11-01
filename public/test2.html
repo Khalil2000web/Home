@@ -8,41 +8,43 @@
   html, body {
     height: 100%;
     margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: repeating-linear-gradient(
-        45deg,
-        #000 0, #000 25px,
-        #fff 25px, #fff 50px
-    );
     overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    background-color: #000;
+    /* Real checkerboard pattern */
+    background-image:
+      linear-gradient(45deg, #fff 25%, transparent 25%),
+      linear-gradient(-45deg, #fff 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #fff 75%),
+      linear-gradient(-45deg, transparent 75%, #fff 75%);
+    background-size: 80px 80px;
+    background-position: 0 0, 0 40px, 40px -40px, -40px 0;
   }
 
-  /* Flames layer */
+  /* Flame animation container */
   .flames {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     overflow: hidden;
-    z-index: 1;
     pointer-events: none;
+    z-index: 1;
   }
 
   .flame {
     position: absolute;
-    bottom: -100px;
-    width: 30px;
-    height: 80px;
-    background: radial-gradient(ellipse at center, 
-      rgba(255,255,0,0.9) 0%, 
-      rgba(255,140,0,0.8) 50%, 
-      rgba(255,0,0,0.7) 100%);
+    bottom: -120px;
+    width: 40px;
+    height: 120px;
+    background: radial-gradient(ellipse at center,
+      rgba(255,255,0,0.9) 0%,
+      rgba(255,140,0,0.8) 45%,
+      rgba(255,0,0,0.7) 80%);
     border-radius: 50%;
-    filter: blur(10px);
+    filter: blur(15px) brightness(1.5);
     animation: rise 4s linear infinite;
   }
 
+  /* Randomized flame behavior */
   @keyframes rise {
     0% {
       transform: translateY(0) scale(1);
@@ -54,48 +56,53 @@
     }
   }
 
-  /* Randomize flame positions and speeds */
-  .flame:nth-child(odd) {
-    animation-duration: 3s;
-  }
-  .flame:nth-child(even) {
-    animation-duration: 5s;
-  }
+  .flame:nth-child(odd) { animation-duration: 3s; }
+  .flame:nth-child(even) { animation-duration: 5s; }
+  .flame:nth-child(3n) { animation-duration: 4.2s; }
 
-  /* Center content */
+  /* Make many flames dynamically visible */
+  .flame:nth-child(1)  { left: 5%; animation-delay: 0s; }
+  .flame:nth-child(2)  { left: 10%; animation-delay: 0.3s; }
+  .flame:nth-child(3)  { left: 20%; animation-delay: 0.7s; }
+  .flame:nth-child(4)  { left: 30%; animation-delay: 1s; }
+  .flame:nth-child(5)  { left: 40%; animation-delay: 1.4s; }
+  .flame:nth-child(6)  { left: 50%; animation-delay: 1.8s; }
+  .flame:nth-child(7)  { left: 60%; animation-delay: 2.1s; }
+  .flame:nth-child(8)  { left: 70%; animation-delay: 2.5s; }
+  .flame:nth-child(9)  { left: 80%; animation-delay: 2.8s; }
+  .flame:nth-child(10) { left: 90%; animation-delay: 3s; }
+
+  /* Text layer */
   .content {
     position: relative;
     z-index: 2;
-    color: #f5f5f5; /* soft white, slightly warm */
-    text-align: center;
     top: 45%;
     transform: translateY(-50%);
+    text-align: center;
+    mix-blend-mode: difference; /* Smart contrast! */
   }
 
   .content h1 {
     font-size: 3.5em;
     letter-spacing: 2px;
+    color: #fff;
     margin-bottom: 0.3em;
   }
 
   .content p {
     font-size: 1.1em;
+    color: #f2f2f2;
     letter-spacing: 1px;
-    color: #ddd;
   }
 </style>
 </head>
 <body>
 
 <div class="flames">
-  <!-- multiple flame elements for animation -->
-  <div class="flame" style="left:10%; animation-delay:0s;"></div>
-  <div class="flame" style="left:20%; animation-delay:1s;"></div>
-  <div class="flame" style="left:35%; animation-delay:0.5s;"></div>
-  <div class="flame" style="left:50%; animation-delay:2s;"></div>
-  <div class="flame" style="left:65%; animation-delay:1.5s;"></div>
-  <div class="flame" style="left:80%; animation-delay:0.3s;"></div>
-  <div class="flame" style="left:90%; animation-delay:2.2s;"></div>
+  <div class="flame"></div><div class="flame"></div><div class="flame"></div>
+  <div class="flame"></div><div class="flame"></div><div class="flame"></div>
+  <div class="flame"></div><div class="flame"></div><div class="flame"></div>
+  <div class="flame"></div>
 </div>
 
 <div class="content">
