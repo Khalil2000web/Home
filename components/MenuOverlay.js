@@ -72,12 +72,12 @@ export default function MenuOverlay() {
           </Link>
           
           <a
-            href="https://tour.khaliil.com"
+            href="https://trips.khaliil.com"
             rel="noopener noreferrer"
             className="menu-link"
             onClick={() => setMenuOpen(false)}
           >
-            TOUR
+            TRIPS
           </a>
 
           <Link
