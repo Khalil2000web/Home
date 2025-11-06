@@ -63,15 +63,17 @@ return (
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    max-width: 100vw;
   }
 
   p {
     height: 200px;
+    max-width:100vw;
     width: min(90vw, 500px); /* responsive width, never exceeds viewport */
     margin: 100px auto;
     position: relative;
     overflow: visible; /* allows hover scale inside container */
+    flex-wrap:wrap;
   }
 
   img {
