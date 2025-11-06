@@ -22,6 +22,8 @@
   text-transform: uppercase;
   overflow-wrap: break-word;
   word-break: break-word;
+  text-stroke: 0.5px white;
+  -webkit-text-stroke: 0.5px white;
 }
 
 .content p {text-align: justify;line-height: 1.8;font-size: 15px;}.content > * {word-break: break-word;}
