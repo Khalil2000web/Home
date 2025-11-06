@@ -58,7 +58,7 @@ export default function HomePage({ media }) {
       
       <div className="underwork-container">
         <div className="underwork-box">
-          <h1>🚧 This page is under work 🚧</h1>
+          <h1>🚧 This page is under construction 🚧</h1>
           <p>Please check out other pages meanwhile:</p>
           <div className="links">
             <a className="underwork-link" href="https://trips.khaliil.com/">TRIPS</a>
