@@ -52,30 +52,61 @@ export default function HomePage({ media }) {
           type="video/mp4"
         />
       </Head>
-
-      <div className="homepage_gallery">
-        {media.map((item, i) =>
-          item.type === "video" ? (
-            <div key={i} style={{ marginBottom: "80px" }}>
-              <CustomVideo
-                src={item.src}
-                muteIcon={item.muteIcon}
-                unmuteIcon={item.unmuteIcon}
-                videoLink={item.videoLink}
-              />
-            </div>
-          ) : (
-            <img
-              key={i}
-              src={item.src}
-              alt="Home-Page Image"
-              decoding="async"
-              loading={i < 2 ? "eager" : "lazy"}
-              className="image"
-            />
-          )
-        )}
+      
+      
+      
+      <div className="underwork-container">
+        <div className="underwork-box">
+          <h1>🚧 This page is under work 🚧</h1>
+          <p>Please check out other pages meanwhile:</p>
+          <div className="links">
+            <a href="https://trips.khaliil.com/">TRIPS</a>
+            <Link href="/about">ABOUT</Link>
+            <Link href="/legal">LEGAL</Link>
+          </div>
+        </div>
       </div>
+
+      <style jsx>{`
+        .underwork-container {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;text-transform:uppercase;
+
+        }
+        
+      .underwork-container h1 {
+      font-weight:300;
+      }
+        
+        .underwork-box {
+          animation: fadeIn 1s ease;
+        }
+        .links {
+          margin-top: 20px;
+          display: flex;
+          gap: 15px;
+          justify-content: center;
+        }
+        .links a {
+          color: white;
+          text-decoration: none;
+          border-bottom: 1px solid white;
+          transition: opacity 0.3s;
+        }
+        .links a:hover {
+          opacity: 0.7;
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+      
+      
+    
     </>
   );
 }
