@@ -80,11 +80,20 @@
 
 
 .menu-footer {
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  align-items:center;
+  justify-content:center;
   margin-top: auto;
   padding: 1.1rem 0;
+  text-transform: uppercase;
+}
+
+.menu-footer p {
   font-size: 14px;
   color: #e3e3e3;
-  text-transform: uppercase;letter-spacing:3px;
+  letter-spacing:3px;
 }
 
 .menu-cover {
