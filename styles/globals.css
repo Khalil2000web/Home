@@ -90,6 +90,10 @@
   text-transform: uppercase;
 }
 
+.menu-footer .menu-link {
+  font-size: 19px;
+}
+
 .menu-footer p {
   font-size: 14px;
   color: #e3e3e3;
