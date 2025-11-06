@@ -80,6 +80,8 @@ export default function HomePage({ media }) {
         
       .underwork-container h1 {
       font-weight:300;
+      text-stroke: 0.5px white;
+      -webkit-text-stroke: 0.5px white;
       }
         
         .underwork-box {
