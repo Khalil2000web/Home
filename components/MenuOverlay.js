@@ -16,6 +16,8 @@ export default function MenuOverlay() {
         return 'ABOUT';
       case '/legal':
         return 'LEGAL';
+      case '/carter':
+        return 'CARTER';
       case '/_error':
         return '_ERROR';
       default:
@@ -79,6 +81,14 @@ export default function MenuOverlay() {
           >
             TRIPS
           </a>
+          
+          <Link
+            href="/carter"
+            className={`menu-link ${router.pathname === '/carter' ? 'active' : ''}`}
+            onClick={() => setMenuOpen(false)}
+          >
+            CARTER
+          </Link>
 
           <Link
             href="/about"
