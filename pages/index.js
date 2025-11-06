@@ -62,8 +62,6 @@ export default function HomePage({ media }) {
           <p>Please check out other pages meanwhile:</p>
           <div className="links">
             <a className="underwork-link" href="https://trips.khaliil.com/">TRIPS</a>
-            <Link className="underwork-link href="/about">ABOUT</Link>
-            <Link className="underwork-link href="/legal">LEGAL</Link>
           </div>
         </div>
       </div>
