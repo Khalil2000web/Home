@@ -61,9 +61,9 @@ export default function HomePage({ media }) {
           <h1>🚧 This page is under work 🚧</h1>
           <p>Please check out other pages meanwhile:</p>
           <div className="links">
-            <a href="https://trips.khaliil.com/">TRIPS</a>
-            <Link href="/about">ABOUT</Link>
-            <Link href="/legal">LEGAL</Link>
+            <a className="underwork-link" href="https://trips.khaliil.com/">TRIPS</a>
+            <Link className="underwork-link href="/about">ABOUT</Link>
+            <Link className="underwork-link href="/legal">LEGAL</Link>
           </div>
         </div>
       </div>
@@ -91,13 +91,13 @@ export default function HomePage({ media }) {
           gap: 15px;
           justify-content: center;
         }
-        .links a {
+        .links .underwork-link {
           color: white;
           text-decoration: none;
           border-bottom: 1px solid white;
           transition: opacity 0.3s;
         }
-        .links a:hover {
+        .links .underwork-link:hover {
           opacity: 0.7;
         }
         @keyframes fadeIn {
