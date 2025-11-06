@@ -70,7 +70,7 @@ export default function HomePage({ media }) {
         .underwork-container {
           height: 100vh;
           display: flex;
-          width:90%;
+          width:85%;
           margin:0 auto;
           align-items: center;
           justify-content: center;
