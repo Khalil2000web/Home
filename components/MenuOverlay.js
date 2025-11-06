@@ -88,19 +88,12 @@ export default function MenuOverlay() {
             ABOUT
           </Link>
 
-          <Link
-            href="/legal"
-            className={`menu-link ${router.pathname === '/legal' ? 'active' : ''}`}
-            onClick={() => setMenuOpen(false)}
-          >
-            LEGAL
-          </Link>
-
         </nav>
         
-  <div className="menu-footer">© 2025 KHALIIL™</div>
-        
-      </div>
-    </>
-  );
+<div className="menu-footer">
+    <Link href="/legal" className={`menu-link ${router.pathname === '/legal' ? 'active' : ''}`} onClick={() => setMenuOpen(false)} >LEGAL</Link>
+    <p>© 2025 KHALIIL™</p></div>
+</div>
+</>
+);
 }
