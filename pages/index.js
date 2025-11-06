@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import CustomVideo from "../components/CustomVideo";
 
 export default function HomePage({ media }) {
