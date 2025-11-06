@@ -5,7 +5,7 @@ export default function Carter() {
 return (
 <>
 <Head>
-<title>CARTER: Tye Cat</title>
+<title>CARTER: The Cat</title>
 <meta charSet="UTF-8" />
 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
