@@ -71,6 +71,7 @@ export default function HomePage({ media }) {
           height: 100vh;
           display: flex;
           width:90%;
+          margin:0 auto;
           align-items: center;
           justify-content: center;
           text-align: center;text-transform:uppercase;
