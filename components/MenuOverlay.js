@@ -82,6 +82,15 @@ export default function MenuOverlay() {
             TRIPS
           </a>
           
+          <a
+            href="https://khaliil.com/"
+            rel="noopener noreferrer"
+            className="menu-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            CRT MENU
+          </a>
+          
           <Link
             href="/carter"
             className={`menu-link ${router.pathname === '/carter' ? 'active' : ''}`}
