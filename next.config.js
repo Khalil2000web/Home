@@ -5,7 +5,12 @@ const nextConfig = {
     return [
       {
         source: '/tour',
-        destination: 'https://tour.khaliil.com/',
+        destination: 'https://trips.khaliil.com/',
+        permanent: true,
+      },
+      {
+        source: '/trips',
+        destination: 'https://trips.khaliil.com/',
         permanent: true,
       },
     ];
