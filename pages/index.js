@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import CustomVideo from "../components/CustomVideo";
+import MenuOverlay from '../components/MenuOverlay';
 
 export default function HomePage({ media }) {
   return (
@@ -61,7 +62,7 @@ export default function HomePage({ media }) {
           <h1>🚧 This page is under construction 🚧</h1>
           <p>Please check out other pages meanwhile:</p>
           <div className="links">
-            <a className="underwork-link" href="https://trips.khaliil.com/">TRIPS</a>
+            <button onClick={handleToggle} className="underwork-link" >OPEN</button>
           </div>
         </div>
       </div>
